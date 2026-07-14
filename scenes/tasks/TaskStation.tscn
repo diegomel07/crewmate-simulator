@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://hmlfpgoo4vg6"]
+
+[ext_resource type="Script" uid="uid://dwwk5u5axocux" path="res://scenes/tasks/TaskStation.gd" id="1_ipxl1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ipxl1"]
+size = Vector3(1, 0.7666321, 1)
+
+[node name="TaskStation" type="Area3D" unique_id=962434791]
+script = ExtResource("1_ipxl1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1337240665]
+transform = Transform3D(2.4569101, 0, 0, 0, 1.4, 0, 0, 0, 1.9000001, 0, 0.4476898, 0)
+shape = SubResource("BoxShape3D_ipxl1")
+
+[node name="PromptLabel3D" type="Label3D" parent="." unique_id=1565936285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.94355726, 0.29164505)
+visible = false
+billboard = 1
+text = "Presiona E"
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1252742482]
+transform = Transform3D(0.7183168, 0, 0, 0, 0.8063605, 0, 0, 0, 0.67773443, 0, 0.5970844, 0.73357624)
+size = Vector3(1, 0.9116821, 0.37426758)

@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bkhjc4onx6wg4"]
+
+[ext_resource type="Script" uid="uid://bhnli4j6h3ly6" path="res://scenes/minigames/divertPower/DivertPowerMinigame.gd" id="1_t2rsy"]
+
+[node name="DivertPowerMinigame" type="Control" unique_id=986321683]
+layout_mode = 3
+anchor_left = 0.132
+anchor_top = 0.142
+anchor_right = 0.87200004
+anchor_bottom = 0.80100006
+offset_left = -0.06399536
+offset_top = -0.01600647
+offset_right = -0.5440674
+offset_bottom = -0.048034668
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t2rsy")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1958093632]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InstructionLabel" type="Label" parent="." unique_id=211215912]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="MeterTrack" type="Control" parent="." unique_id=744301911]
+anchors_preset = 0
+offset_left = 395.0
+offset_top = 171.0
+offset_right = 435.0
+offset_bottom = 211.0
+
+[node name="TargetZone" type="ColorRect" parent="MeterTrack" unique_id=984284030]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Marker" type="ColorRect" parent="MeterTrack" unique_id=1068658796]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 3.1250002
+anchor_right = 4.125
+anchor_bottom = 1.0
+offset_left = 167.0
+offset_top = 134.0
+offset_right = 167.0
+offset_bottom = 134.0
+color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
+
+[node name="HoldProgressBar" type="ProgressBar" parent="." unique_id=1653308652]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 268.0
+offset_right = 244.0
+offset_bottom = 295.0
+
+[node name="FeedbackLabel" type="Label" parent="." unique_id=1201366867]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

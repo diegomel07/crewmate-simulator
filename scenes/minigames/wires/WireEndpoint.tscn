@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://gyj250hnpruq"]
+
+[ext_resource type="Script" uid="uid://cjn4ypsdr2p85" path="res://scenes/minigames/wires/WireEndpoint.gd" id="1_w12lv"]
+[ext_resource type="Texture2D" uid="uid://j0mclhrw2wo0" path="res://art/wire.png" id="2_0v30d"]
+
+[node name="WireEndpoint" type="Control" unique_id=698668533]
+layout_mode = 3
+anchor_left = -0.020000001
+anchor_top = -0.025
+anchor_right = 0.016
+anchor_bottom = 0.026
+offset_left = 23.04
+offset_top = 16.2
+offset_right = -18.432001
+offset_bottom = -16.848
+script = ExtResource("1_w12lv")
+
+[node name="EndpointArt" type="Sprite2D" parent="." unique_id=603662612]
+texture = ExtResource("2_0v30d")
