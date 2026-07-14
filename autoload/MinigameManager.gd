@@ -44,23 +44,9 @@ func open_minigame(task_id: String) -> void:
 	current_minigame.minigame_completed.connect(_on_minigame_completed)
 	current_minigame.minigame_failed.connect(_on_minigame_failed)
 
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)   # <- agregar esto
 	get_tree().paused = true
 	minigame_opened.emit(task_id)
-
-
-func close_minigame_forcefully() -> void:
-	# Por si necesitás cancelar un minijuego desde afuera (ej: el jugador
-	# muere mientras hace una tarea, o se desconecta).
-	if current_minigame != null:
-		_close_minigame(false)
-
-
-func _on_minigame_completed() -> void:
-	_close_minigame(true)
-
-
-func _on_minigame_failed() -> void:
-	_close_minigame(false)
 
 
 func _close_minigame(success: bool) -> void:
@@ -72,5 +58,14 @@ func _close_minigame(success: bool) -> void:
 
 	current_task_id = ""
 	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)   # <- agregar esto
 
 	minigame_finished.emit(finished_task_id, success)
+
+
+func _on_minigame_completed() -> void:
+	_close_minigame(true)
+
+
+func _on_minigame_failed() -> void:
+	_close_minigame(false)
