@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dwy0w777v1a06"]
+
+[ext_resource type="Script" uid="uid://byv3dldcs4tbc" path="res://scripts/top_down_camera.gd" id="1_qrnae"]
+
+[node name="MinimapViewport" type="SubViewport" unique_id=1775704983]
+size = Vector2i(600, 400)
+render_target_update_mode = 4
+
+[node name="TopDownCamera" type="Camera3D" parent="." unique_id=1863086968]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 40, -1.638)
+projection = 1
+size = 100.0
+script = ExtResource("1_qrnae")

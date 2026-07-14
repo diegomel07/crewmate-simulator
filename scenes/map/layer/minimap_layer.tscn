@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://drt4642f7ykul"]
+
+[ext_resource type="Script" uid="uid://b1m047ao3psdd" path="res://scenes/map/layer/minimap_controller.gd" id="1_disj4"]
+[ext_resource type="Shader" uid="uid://cj8aceb3gge6l" path="res://shader/blur_shader.gdshader" id="2_atq1c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fxya2"]
+shader = ExtResource("2_atq1c")
+shader_parameter/blur_amount = 2.000000095
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1hx74"]
+viewport_path = NodePath("MinimapViewport")
+
+[node name="MinimapLayer" type="CanvasLayer" unique_id=1355307307]
+layer = 10
+script = ExtResource("1_disj4")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=1207677839]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.5058824)
+
+[node name="Blur" type="ColorRect" parent="." unique_id=805101156]
+material = SubResource("ShaderMaterial_fxya2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="MinimapContainer" type="Control" parent="." unique_id=865392931]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MinimapDisplay" type="TextureRect" parent="MinimapContainer" unique_id=173635941]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("ViewportTexture_1hx74")
+stretch_mode = 4
