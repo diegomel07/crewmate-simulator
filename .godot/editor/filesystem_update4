@@ -1,0 +1,4 @@
+res://scenes/first_person_demo.tscn
+res://scenes/door/automatic_sliding_door.gd
+res://scenes/map/layer/minimap_layer.tscn
+res://scenes/map/layer/minimap_controller.gd
