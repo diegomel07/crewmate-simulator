@@ -1,14 +1,2 @@
 res://scenes/first_person_demo.tscn
-res://autoload/MinigameManager.gd
-res://scenes/minigames/Memory/MemoryMinigame.tscn
-res://scenes/minigames/Memory/GridButton.tscn
-res://scenes/minigames/Memory/LightIndicator.tscn
-res://scenes/minigames/Memory/LightIndicator.gd
-res://scenes/minigames/Memory/GridButton.gd
-res://scenes/minigames/Memory/MemoryMinigame.gd
-res://scenes/minigames/memory/MemoryMinigame.tscn
-res://scenes/minigames/memory/MemoryMinigame.gd
-res://scenes/minigames/memory/GridButton.tscn
-res://scenes/minigames/memory/LightIndicator.tscn
-res://scenes/minigames/memory/LightIndicator.gd
-res://scenes/minigames/memory/GridButton.gd
+res://scenes/ship/Ship.tscn

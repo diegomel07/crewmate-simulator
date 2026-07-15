@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ck82vuycphgwl"]
+
+[ext_resource type="PackedScene" uid="uid://c3w80lqk50p4o" path="res://assets/among_us_-_map_the_skeld/scene.gltf" id="1_dkinh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dqc1n"]
+size = Vector3(140.52332, 1, 45.195313)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=859641290]
+
+[node name="Sketchfab_Scene" parent="." unique_id=360511159 instance=ExtResource("1_dkinh")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=330759841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.8805532, 69.76166, -0.85019684, -41.55582)
+shape = SubResource("BoxShape3D_dqc1n")
+debug_color = Color(1.1668993, 0.26990327, 0.9658485, 1)

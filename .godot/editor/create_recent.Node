@@ -1,3 +1,5 @@
+CollisionShape3D
+StaticBody3D
 GridContainer
 ColorRect
 Label
@@ -7,8 +9,6 @@ HBoxContainer
 ProgressBar
 CSGBox3D
 Label3D
-CollisionShape3D
 Sprite2D
 Area3D
 Panel
-VBoxContainer
