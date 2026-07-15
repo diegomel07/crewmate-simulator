@@ -419,6 +419,10 @@ task_id = "swipe_card"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.483618, -0.055623412, -6.540879)
 task_id = "align_engine"
 
+[node name="TaskStation5" parent="." unique_id=1880788806 instance=ExtResource("3_mt36p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.924732, -0.055623412, -6.540879)
+task_id = "memory"
+
 [node name="AutomaticSlidingDoor" parent="." unique_id=1606330643 instance=ExtResource("4_81fyy")]
 
 [node name="MinimapLayer" parent="." unique_id=1355307307 instance=ExtResource("5_4nkb8")]

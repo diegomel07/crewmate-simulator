@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bvrcqqp71eimh"]
+
+[ext_resource type="Script" uid="uid://dd7ji31gl7b3j" path="res://scenes/minigames/memory/LightIndicator.gd" id="1_s6qr3"]
+
+[node name="LightIndicator" type="Control" unique_id=405814387]
+layout_mode = 3
+anchor_right = 0.037
+anchor_bottom = 0.068
+offset_right = 0.37599945
+offset_bottom = -0.06400299
+script = ExtResource("1_s6qr3")
+
+[node name="LightArt" type="ColorRect" parent="." unique_id=1144159588]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1.405418e-05, 0.50955373, 0.8453198, 1)

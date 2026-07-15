@@ -13,6 +13,7 @@ var minigame_registry: Dictionary = {
 	"swipe_card":      preload("res://scenes/minigames/swipeCard/SwipeCardMinigame.tscn"),
 	"clear_asteroids": preload("res://scenes/minigames/clearAsteroid/ClearAsteroidsMinigame.tscn"),
 	"align_engine":    preload("res://scenes/minigames/alignLine/AlignLineMinigame.tscn"),
+	"memory":          preload("res://scenes/minigames/memory/MemoryMinigame.tscn")
 }
 
 var canvas_layer: CanvasLayer

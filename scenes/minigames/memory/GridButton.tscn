@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dnraklqinnxxs"]
+
+[ext_resource type="Script" uid="uid://uf21d8ke4as1" path="res://scenes/minigames/memory/GridButton.gd" id="1_rwibx"]
+
+[node name="GridButton" type="Control" unique_id=1846986431]
+layout_mode = 3
+anchor_right = 0.041
+anchor_bottom = 0.07300001
+offset_right = -0.23200226
+offset_bottom = -0.30400467
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rwibx")
+
+[node name="ButtonArt" type="ColorRect" parent="." unique_id=1624719073]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.46229059, 0.46229059, 0.46229059, 1)

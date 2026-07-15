@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://eg3v66f2gdnh"]
+
+[ext_resource type="Script" uid="uid://7kdt74cm00jt" path="res://scenes/minigames/memory/MemoryMinigame.gd" id="1_cc72k"]
+
+[node name="MemoryMinigame" type="Control" unique_id=2103962861]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cc72k")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1097140173]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InstructionLabel" type="Label" parent="." unique_id=761310487]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LeftPanel" type="Control" parent="." unique_id=1174851689]
+layout_mode = 1
+anchor_right = 0.432
+anchor_bottom = 1.0
+offset_right = 0.33599854
+grow_vertical = 2
+
+[node name="LeftPanelArt" type="ColorRect" parent="LeftPanel" unique_id=281249752]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressLights" type="HBoxContainer" parent="LeftPanel" unique_id=1187953564]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.998
+anchor_bottom = 0.20500001
+offset_right = -0.0039978027
+offset_bottom = 0.1599884
+
+[node name="DisplayScreen" type="Control" parent="LeftPanel" unique_id=794347582]
+layout_mode = 1
+anchor_left = 0.010000001
+anchor_top = 0.326
+anchor_right = 0.98600006
+anchor_bottom = 0.989
+offset_left = 0.019999504
+offset_top = -0.2480011
+offset_right = -0.028015137
+offset_bottom = 0.12799072
+
+[node name="DisplayGrid" type="GridContainer" parent="LeftPanel/DisplayScreen" unique_id=2027753928]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RightPanel" type="Control" parent="." unique_id=153158247]
+layout_mode = 1
+anchor_left = 0.595
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.5599365
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="RightPanelArt" type="ColorRect" parent="RightPanel" unique_id=1134807911]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonGrid" type="GridContainer" parent="RightPanel" unique_id=1282207926]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.024
+anchor_top = 0.40600002
+anchor_right = 0.9760001
+anchor_bottom = 0.97200006
+offset_left = -0.18400002
+offset_top = -0.088012695
+offset_right = 0.18395996
+offset_bottom = 0.14398193
+
+[node name="FeedbackLabel" type="Label" parent="." unique_id=188464142]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
