@@ -1,10 +1,10 @@
-Label
 ColorRect
+Label
+Control
 GridContainer
 CollisionShape3D
 StaticBody3D
 FoldableContainer
-Control
 HBoxContainer
 ProgressBar
 CSGBox3D

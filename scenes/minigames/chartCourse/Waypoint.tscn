@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c5u2digbh76og"]
+
+[ext_resource type="Script" uid="uid://csrt183vm0m2n" path="res://scenes/minigames/chartCourse/waypoint.gd" id="1_hwlj1"]
+
+[node name="Waypoint" type="Control" unique_id=1940095152]
+layout_mode = 3
+anchor_right = 0.025
+anchor_bottom = 0.037
+offset_right = 0.19999886
+offset_bottom = 0.024000168
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hwlj1")
+
+[node name="WaypointArt" type="ColorRect" parent="." unique_id=810705581]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1.92523e-07, 0.3925751, 0.6685222, 1)

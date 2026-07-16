@@ -396,6 +396,18 @@ task_id = "memory"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.081387, -0.055623412, -6.540879)
 task_id = "unlock"
 
+[node name="TaskStation7" parent="." unique_id=585299172 instance=ExtResource("3_mt36p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.081387, -0.055623412, -6.540879)
+task_id = "primeShields"
+
+[node name="TaskStation8" parent="." unique_id=450825956 instance=ExtResource("3_mt36p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2753067, -0.055623412, -6.540879)
+task_id = "primeShields"
+
+[node name="TaskStation9" parent="." unique_id=1601269781 instance=ExtResource("3_mt36p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.361393, -0.055623412, -6.540879)
+task_id = "chartCourse"
+
 [node name="AutomaticSlidingDoor" parent="." unique_id=1606330643 instance=ExtResource("4_81fyy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.702015, 0, 15.784744)
 

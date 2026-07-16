@@ -14,7 +14,9 @@ var minigame_registry: Dictionary = {
 	"clear_asteroids": preload("res://scenes/minigames/clearAsteroid/ClearAsteroidsMinigame.tscn"),
 	"align_engine":    preload("res://scenes/minigames/alignLine/AlignLineMinigame.tscn"),
 	"memory":          preload("res://scenes/minigames/memory/MemoryMinigame.tscn"),
-	"unlock":          preload("res://scenes/minigames/unlockManifolds/UnlockManifoldsMinigame.tscn")
+	"unlock":          preload("res://scenes/minigames/unlockManifolds/UnlockManifoldsMinigame.tscn"),
+	"primeShields":    preload("res://scenes/minigames/primeShields/PrimeShieldsMinigame.tscn"),
+	"chartCourse":     preload("res://scenes/minigames/chartCourse/ChartCourseMinigame.tscn")
 }
 
 var canvas_layer: CanvasLayer
