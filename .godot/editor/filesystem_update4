@@ -1,2 +1,3 @@
+res://scenes/minigames/unlockManifolds/UnlockManifoldsMinigame.tscn
+res://autoload/MinigameManager.gd
 res://scenes/first_person_demo.tscn
-res://scenes/ship/Ship.tscn

@@ -206,7 +206,7 @@ _data = {
 &"swing_02": SubResource("Animation_cdtcq")
 }
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_xafnq"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_4nkb8"]
 viewport_path = NodePath("../MinimapViewport")
 
 [node name="world" type="Node3D" unique_id=145907840]
@@ -392,13 +392,17 @@ task_id = "align_engine"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.924732, -0.055623412, -6.540879)
 task_id = "memory"
 
+[node name="TaskStation6" parent="." unique_id=1175816102 instance=ExtResource("3_mt36p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.081387, -0.055623412, -6.540879)
+task_id = "unlock"
+
 [node name="AutomaticSlidingDoor" parent="." unique_id=1606330643 instance=ExtResource("4_81fyy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.702015, 0, 15.784744)
 
 [node name="MinimapLayer" parent="." unique_id=1355307307 instance=ExtResource("5_4nkb8")]
 
 [node name="MinimapDisplay" parent="MinimapLayer/MinimapContainer" parent_id_path=PackedInt32Array(1355307307, 865392931) index="0" unique_id=173635941]
-texture = SubResource("ViewportTexture_xafnq")
+texture = SubResource("ViewportTexture_4nkb8")
 
 [node name="MinimapViewport" parent="." unique_id=1775704983 instance=ExtResource("6_xafnq")]
 
