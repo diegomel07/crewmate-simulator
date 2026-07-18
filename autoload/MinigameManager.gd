@@ -7,7 +7,6 @@ signal minigame_opened(task_id: String)
 var current_minigame: Node = null
 var current_task_id: String = ""
 
-# Mapea cada task_id a su escena. Agregar acá cualquier minijuego nuevo.
 var minigame_registry: Dictionary = {
 	"wires":           preload("res://scenes/minigames/wires/WiresMinigame.tscn"),
 	"swipe_card":      preload("res://scenes/minigames/swipeCard/SwipeCardMinigame.tscn"),
@@ -25,7 +24,7 @@ var canvas_layer: CanvasLayer
 
 func _ready() -> void:
 	canvas_layer = CanvasLayer.new()
-	canvas_layer.layer = 100  # por encima de todo lo demás
+	canvas_layer.layer = 100  
 	canvas_layer.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(canvas_layer)
 
@@ -49,7 +48,7 @@ func open_minigame(task_id: String) -> void:
 	current_minigame.minigame_completed.connect(_on_minigame_completed)
 	current_minigame.minigame_failed.connect(_on_minigame_failed)
 
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)   # <- agregar esto
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)   
 	get_tree().paused = true
 	minigame_opened.emit(task_id)
 
@@ -63,7 +62,7 @@ func _close_minigame(success: bool) -> void:
 
 	current_task_id = ""
 	get_tree().paused = false
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)   # <- agregar esto
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)   
 
 	minigame_finished.emit(finished_task_id, success)
 

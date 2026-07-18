@@ -5,7 +5,6 @@ signal item_cleaned
 var is_dragging: bool = false
 var drag_offset: Vector2 = Vector2.ZERO
 
-# Eliminamos el export de NodePath y dejamos solo esto:
 var vent_rect: Control
 
 func _gui_input(event: InputEvent) -> void:
@@ -30,7 +29,6 @@ func _process(_delta: float) -> void:
 
 func check_if_cleaned() -> void:
 	var center = global_position + (size / 2.0)
-	# Ya no usamos get_global_rect() de un onready, sino directamente de la variable
 	if not vent_rect.get_global_rect().has_point(center):
 		emit_signal("item_cleaned")
 		queue_free()
