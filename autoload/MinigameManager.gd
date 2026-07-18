@@ -16,7 +16,8 @@ var minigame_registry: Dictionary = {
 	"memory":          preload("res://scenes/minigames/memory/MemoryMinigame.tscn"),
 	"unlock":          preload("res://scenes/minigames/unlockManifolds/UnlockManifoldsMinigame.tscn"),
 	"primeShields":    preload("res://scenes/minigames/primeShields/PrimeShieldsMinigame.tscn"),
-	"chartCourse":     preload("res://scenes/minigames/chartCourse/ChartCourseMinigame.tscn")
+	"chartCourse":     preload("res://scenes/minigames/chartCourse/ChartCourseMinigame.tscn"),
+	"clean_vent":      preload("res://scenes/minigames/cleanVent/CleanVent.tscn")
 }
 
 var canvas_layer: CanvasLayer

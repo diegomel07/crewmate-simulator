@@ -1,6 +1,6 @@
+Control
 ColorRect
 Label
-Control
 GridContainer
 CollisionShape3D
 StaticBody3D

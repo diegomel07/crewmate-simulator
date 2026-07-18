@@ -1,3 +1,5 @@
-res://scenes/minigames/chartCourse/ChartCourseMinigame.tscn
+res://scenes/minigames/cleanVent/CleanVent.tscn
+res://scenes/minigames/cleanVent/clean_vent.gd
+res://scenes/minigames/cleanVent/trash.tscn
+res://scenes/minigames/cleanVent/trash.gd
 res://autoload/MinigameManager.gd
-res://scenes/first_person_demo.tscn
