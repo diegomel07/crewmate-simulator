@@ -16,7 +16,8 @@ var minigame_registry: Dictionary = {
 	"unlock":          preload("res://scenes/minigames/unlockManifolds/UnlockManifoldsMinigame.tscn"),
 	"primeShields":    preload("res://scenes/minigames/primeShields/PrimeShieldsMinigame.tscn"),
 	"chartCourse":     preload("res://scenes/minigames/chartCourse/ChartCourseMinigame.tscn"),
-	"clean_vent":      preload("res://scenes/minigames/cleanVent/CleanVent.tscn")
+	"clean_vent":      preload("res://scenes/minigames/cleanVent/CleanVent.tscn"),
+	"empty_trash":     preload("res://scenes/minigames/emptyTrash/EmptyTrash.tscn")
 }
 
 var canvas_layer: CanvasLayer
@@ -49,7 +50,7 @@ func open_minigame(task_id: String) -> void:
 	current_minigame.minigame_failed.connect(_on_minigame_failed)
 
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)   
-	get_tree().paused = true
+	#get_tree().paused = true
 	minigame_opened.emit(task_id)
 
 
@@ -61,7 +62,7 @@ func _close_minigame(success: bool) -> void:
 		current_minigame = null
 
 	current_task_id = ""
-	get_tree().paused = false
+	#get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)   
 
 	minigame_finished.emit(finished_task_id, success)

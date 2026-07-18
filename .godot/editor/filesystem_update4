@@ -1,5 +1,4 @@
-res://scenes/minigames/cleanVent/CleanVent.tscn
-res://scenes/minigames/cleanVent/clean_vent.gd
-res://scenes/minigames/cleanVent/trash.tscn
-res://scenes/minigames/cleanVent/trash.gd
+res://scenes/first_person_demo.tscn
 res://autoload/MinigameManager.gd
+res://scenes/first_person_controller.gd
+res://scenes/minigames/emptyTrash/empty_trash.gd

@@ -13,15 +13,25 @@ func _ready():
 	add_to_group("player")
 
 func _input(event):
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+		return
+	# -------------------------
+	
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
 		head.rotate_x(deg_to_rad(-event.relative.y * mouse_sens))
 		head.rotation.x = clamp(head.rotation.x,deg_to_rad(-89),deg_to_rad(89))
 				
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+		velocity.x = 0
+		velocity.z = 0
+		move_and_slide()
+		return
+	# -------------------------------------------
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():

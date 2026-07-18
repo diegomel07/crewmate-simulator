@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bd85inlm2k55o"]
+
+[ext_resource type="Script" uid="uid://nbymayunvy3v" path="res://scenes/minigames/emptyTrash/trash_physics.gd" id="1_g0hot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kl1i"]
+size = Vector2(39, 39)
+
+[node name="TrashPhysics" type="RigidBody2D" unique_id=114481687]
+process_mode = 3
+script = ExtResource("1_g0hot")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1794066057]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 1, 0.41568628, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2122774836]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_3kl1i")

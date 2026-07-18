@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="AmongusTasks"
+run/main_scene="uid://doovlgt7pjtt2"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
@@ -20,6 +21,7 @@ MinigameManager="*uid://dximde8mbbh83"
 [global_group]
 
 player=""
+trash="trash item from empty trash minigame"
 
 [input]
 
