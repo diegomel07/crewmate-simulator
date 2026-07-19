@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://ch6e2pq076sh"]
+
+[ext_resource type="Script" uid="uid://vqcslxb8f0tu" path="res://scenes/minigames/emptyTrash/empty_trash.gd" id="1_koi4i"]
+[ext_resource type="Script" uid="uid://csy28pm3sj04l" path="res://scenes/minigames/emptyTrash/lever_handle.gd" id="1_srkjh"]
+[ext_resource type="PackedScene" uid="uid://bd85inlm2k55o" path="res://scenes/minigames/emptyTrash/TrashPhysics.tscn" id="2_n8t3r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yueou"]
+size = Vector2(12, 454)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_srkjh"]
+size = Vector2(471, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_koi4i"]
+size = Vector2(680, 311.5)
+
+[node name="EmptyTrash" type="Control" unique_id=532061289]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_koi4i")
+trash_scene = ExtResource("2_n8t3r")
+
+[node name="Background" type="ColorRect" parent="." unique_id=564152348]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=802507869]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 95.0
+offset_right = 1030.0
+offset_bottom = 550.0
+color = Color(0.6052743, 0.6052743, 0.6052743, 1)
+
+[node name="PhysicsContainer" type="Node2D" parent="." unique_id=641824014]
+process_mode = 3
+
+[node name="LeftWall" type="StaticBody2D" parent="PhysicsContainer" unique_id=1082358278]
+process_mode = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsContainer/LeftWall" unique_id=444995297]
+position = Vector2(183, 324)
+shape = SubResource("RectangleShape2D_yueou")
+
+[node name="RightWall" type="StaticBody2D" parent="PhysicsContainer" unique_id=696830372]
+process_mode = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsContainer/RightWall" unique_id=999453316]
+position = Vector2(660, 324)
+shape = SubResource("RectangleShape2D_yueou")
+
+[node name="TrapDoor" type="StaticBody2D" parent="PhysicsContainer" unique_id=984572711]
+process_mode = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsContainer/TrapDoor" unique_id=923308221]
+position = Vector2(419.5, 542.5)
+shape = SubResource("RectangleShape2D_srkjh")
+
+[node name="TrashSpawnArea" type="ReferenceRect" parent="PhysicsContainer" unique_id=1178579327]
+process_mode = 3
+offset_left = 234.0
+offset_top = 116.0
+offset_right = 607.0
+offset_bottom = 300.0
+
+[node name="LeverUI" type="Control" parent="." unique_id=33903450]
+anchors_preset = 0
+offset_left = 662.0
+offset_top = 97.0
+offset_right = 1028.0
+offset_bottom = 545.0
+
+[node name="LeverTrack" type="ColorRect" parent="LeverUI" unique_id=1769221678]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 66.0
+offset_right = 195.0
+offset_bottom = 361.0
+color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+
+[node name="LeverHandle" type="ColorRect" parent="LeverUI" unique_id=1767330918 groups=["trash"]]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 62.0
+offset_right = 236.0
+offset_bottom = 102.0
+color = Color(0.77536, 0.14198518, 0.13255784, 1)
+script = ExtResource("1_srkjh")
+
+[node name="ExitZone" type="Area2D" parent="." unique_id=2088463223]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitZone" unique_id=371292460]
+position = Vector2(427, 710.25)
+shape = SubResource("RectangleShape2D_koi4i")

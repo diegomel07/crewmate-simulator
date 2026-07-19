@@ -408,6 +408,15 @@ task_id = "primeShields"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.361393, -0.055623412, -6.540879)
 task_id = "chartCourse"
 
+[node name="TaskStation10" parent="." unique_id=1373714713 instance=ExtResource("3_mt36p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.791646, 0.07292235, -6.3828278)
+task_id = "clean_vent"
+
+[node name="TaskStation11" parent="." unique_id=958300542 instance=ExtResource("3_mt36p")]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.954935, 0.07292235, -6.3828278)
+task_id = "empty_trash"
+
 [node name="AutomaticSlidingDoor" parent="." unique_id=1606330643 instance=ExtResource("4_81fyy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.702015, 0, 15.784744)
 

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bd807ryd0wcom"]
+
+[ext_resource type="Script" uid="uid://cx13r5qhg8fua" path="res://scenes/minigames/cleanVent/clean_vent.gd" id="1_jvd77"]
+[ext_resource type="PackedScene" uid="uid://c8keceyckb6f6" path="res://scenes/minigames/cleanVent/trash.tscn" id="1_ps8dp"]
+
+[node name="CleanVent" type="Control" unique_id=636513786]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jvd77")
+trash_scene = ExtResource("1_ps8dp")
+
+[node name="Background" type="ColorRect" parent="." unique_id=959956533]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="VentArea" type="ColorRect" parent="." unique_id=881166690]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 95.0
+offset_right = 980.0
+offset_bottom = 550.0
+
+[node name="TrashContainer" type="Control" parent="." unique_id=1579628502]
+anchors_preset = 0
+offset_left = 175.0
+offset_top = 95.0
+offset_right = 980.0
+offset_bottom = 550.0
