@@ -1,3 +1,5 @@
+TextureRect
+Sprite2D
 ColorRect
 Control
 CollisionShape2D
@@ -11,4 +13,3 @@ GridContainer
 CollisionShape3D
 StaticBody3D
 FoldableContainer
-HBoxContainer

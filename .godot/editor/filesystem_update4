@@ -1,4 +1,2 @@
-res://scenes/first_person_demo.tscn
-res://autoload/MinigameManager.gd
-res://scenes/first_person_controller.gd
-res://scenes/minigames/emptyTrash/empty_trash.gd
+res://scenes/minigames/wires/WiresMinigame.tscn
+res://scenes/minigames/wires/WiresMinigame.gd

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://gyj250hnpruq"]
 
 [ext_resource type="Script" uid="uid://cjn4ypsdr2p85" path="res://scenes/minigames/wires/WireEndpoint.gd" id="1_w12lv"]
-[ext_resource type="Texture2D" uid="uid://j0mclhrw2wo0" path="res://art/wire.png" id="2_0v30d"]
+[ext_resource type="Texture2D" uid="uid://j0mclhrw2wo0" path="res://assets/wire.png" id="2_0v30d"]
 
 [node name="WireEndpoint" type="Control" unique_id=698668533]
 layout_mode = 3

@@ -4,19 +4,33 @@ extends MinigameBase
 
 @export var endpoint_scene: PackedScene = preload("res://scenes/minigames/wires/WireEndpoint.tscn")
 
+# Colores en el mismo orden que tus cables (rojo, negro, azul, amarillo)
 @export var wire_colors: Array[Color] = [
-	Color.RED,
-	Color.BLUE,
-	Color.YELLOW,
-	Color(1.0, 0.5, 0.0),  # naranja
+	Color(0.85, 0.15, 0.15),   # rojo
+	Color("fe01ff"),   # negro
+	Color(0.15, 0.35, 0.85),   # azul
+	Color(0.9, 0.75, 0.1),     # amarillo
 ]
 
-@export var wire_thickness: float = 8.0
-@export var margin_top: float = 140.0
-@export var margin_bottom: float = 100.0
-@export var side_margin: float = 120.0
+@export var wire_thickness: float = 9.0
 
-@onready var lines_layer: Control = $LinesLayer
+# Posiciones EXACTAS en píxeles, medidas sobre tu imagen de 504x504.
+# Ajustá estos valores si no calzan pixel-perfect con tus conectores blancos.
+@export var left_positions: Array[Vector2] = [
+	Vector2(29, 95),
+	Vector2(29, 200),
+	Vector2(29, 302),
+	Vector2(29, 405),
+]
+
+@export var right_positions: Array[Vector2] = [
+	Vector2(476, 95),
+	Vector2(476, 200),
+	Vector2(476, 302),
+	Vector2(476, 405),
+]
+
+@onready var lines_layer: WiresLinesLayer = $LinesLayer
 @onready var left_container: Control = $LeftEndpoints
 @onready var right_container: Control = $RightEndpoints
 @onready var feedback_label: Label = $FeedbackLabel
@@ -33,40 +47,37 @@ var drag_current_pos: Vector2 = Vector2.ZERO
 
 
 func _on_minigame_ready() -> void:
-	lines_layer.set_script(preload("res://scenes/minigames/wires/LinesLayer.gd"))
-	lines_layer.wires_minigame = self
+	custom_minimum_size = Vector2(504, 504)
+	size = Vector2(504, 504)
 	call_deferred("_setup_wires")
 
 
 func _setup_wires() -> void:
-	var count := wire_colors.size()
-	var rect := get_rect()
-	var usable_height := rect.size.y - margin_top - margin_bottom
-	var step := usable_height / float(max(count - 1, 1))
+	lines_layer.wires_minigame = self
+
+	var count: int = wire_colors.size()
 
 	# Mezclamos a qué posición derecha corresponde cada color de la izquierda
 	var order := range(count)
 	order.shuffle()
 
 	for i in count:
-		var y: float = margin_top + step * i
-
 		var left_ep: WireEndpoint = endpoint_scene.instantiate()
 		left_container.add_child(left_ep)
-		left_ep.position = Vector2(side_margin, y) - left_ep.size / 2.0
+		left_ep.position = left_positions[i] - left_ep.size / 2.0
 		left_ep.color = wire_colors[i]
 		left_ep.endpoint_clicked.connect(_on_left_endpoint_clicked.bind(i))
 		left_endpoints.append(left_ep)
 
 		var right_ep: WireEndpoint = endpoint_scene.instantiate()
+		right_ep.get_children()[0].flip_h = true
 		right_container.add_child(right_ep)
-		right_ep.position = Vector2(rect.size.x - side_margin, y) - right_ep.size / 2.0
+		right_ep.position = right_positions[i] - right_ep.size / 2.0
 		right_endpoints.append(right_ep)
 
 		correct_pairs[i] = order[i]
 
-	# Ahora que sabemos el orden, le asignamos el color REAL a cada endpoint derecho
-	# (mismo color que el cable izquierdo que le corresponde)
+	# Asignamos el color REAL a cada endpoint derecho según el mapeo generado
 	for left_idx in correct_pairs.keys():
 		var right_idx: int = correct_pairs[left_idx]
 		right_endpoints[right_idx].color = wire_colors[left_idx]
@@ -75,17 +86,15 @@ func _setup_wires() -> void:
 	lines_layer.queue_redraw()
 
 
-func _on_left_endpoint_clicked(_endpoint: WireEndpoint, left_idx: int) -> void:
-	print("halo")
-	# si ya estaba conectado, lo desconectamos para permitir rehacer
+func _on_left_endpoint_clicked(_ednpoint: WireEndpoint, left_idx: int) -> void:
 	connections.erase(left_idx)
 	is_dragging = true
 	drag_from_left = left_idx
-	drag_current_pos = left_endpoints[left_idx].get_center_global() - global_position
+	drag_current_pos = left_endpoints[left_idx].get_center_global() - lines_layer.global_position
 	lines_layer.queue_redraw()
 
 
-func _on_right_endpoint_clicked(_endpoint: WireEndpoint, right_idx: int) -> void:
+func _on_right_endpoint_clicked(_ednpoint: WireEndpoint, right_idx: int) -> void:
 	if is_dragging and drag_from_left != -1:
 		if not connections.values().has(right_idx):
 			connections[drag_from_left] = right_idx
@@ -95,7 +104,6 @@ func _on_right_endpoint_clicked(_endpoint: WireEndpoint, right_idx: int) -> void
 		_check_completion()
 		return
 
-	# click directo sobre un endpoint derecho ya conectado -> desconectar
 	for left_idx in connections.keys():
 		if connections[left_idx] == right_idx:
 			connections.erase(left_idx)
@@ -105,30 +113,15 @@ func _on_right_endpoint_clicked(_endpoint: WireEndpoint, right_idx: int) -> void
 
 func _gui_input(event: InputEvent) -> void:
 	if is_dragging and event is InputEventMouseMotion:
-		drag_current_pos = (event as InputEventMouseMotion).position
+		drag_current_pos = (event as InputEventMouseMotion).position - lines_layer.position
 		lines_layer.queue_redraw()
 
 	if is_dragging and event is InputEventMouseButton:
 		var mb := event as InputEventMouseButton
 		if not mb.pressed and mb.button_index == MOUSE_BUTTON_LEFT:
-			# soltó en el vacío, sin tocar un endpoint derecho -> cancelamos
 			is_dragging = false
 			drag_from_left = -1
 			lines_layer.queue_redraw()
-
-
-func draw_wires(canvas: CanvasItem) -> void:
-	for left_idx in connections.keys():
-		var right_idx: int = connections[left_idx]
-		var color: Color = wire_colors[left_idx]
-		var from: Vector2 = left_endpoints[left_idx].get_center_global() - lines_layer.global_position
-		var to: Vector2 = right_endpoints[right_idx].get_center_global() - lines_layer.global_position
-		canvas.draw_line(from, to, color, wire_thickness)
-
-	if is_dragging and drag_from_left != -1:
-		var color: Color = wire_colors[drag_from_left]
-		var from: Vector2 = left_endpoints[drag_from_left].get_center_global() - lines_layer.global_position
-		canvas.draw_line(from, drag_current_pos, color, wire_thickness)
 
 
 func _check_completion() -> void:
