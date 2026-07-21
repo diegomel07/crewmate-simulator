@@ -3,10 +3,10 @@ class_name ClearAsteroidsMinigame
 extends MinigameBase
 
 @export var asteroid_scene: PackedScene = preload("res://scenes/minigames/clearAsteroid/Asteroid.tscn")
-@export var total_asteroids: int = 10
-@export var max_reach_target: int = 3
+@export var total_asteroids: int = 15
+@export var max_reach_target: int = 8
 
-# Rango de tamaño: los chicos son más rápidos y valen más puntos
+# Rango de tamaño: los chicos son más rápidos
 @export var size_range: Vector2 = Vector2(28.0, 60.0)
 @export var base_speed_range: Vector2 = Vector2(60.0, 120.0)
 
@@ -14,7 +14,7 @@ extends MinigameBase
 @export var difficulty_ramp_interval: float = 5.0
 @export var difficulty_speed_bonus: float = 25.0   # cuánto se suma al rango de velocidad por "nivel"
 
-@export var required_points: int = 80   # puntos necesarios para completar la tarea
+@export var required_destroyed: int = 12   # cantidad de asteroides que hay que destruir para completar la tarea
 @export var spawn_interval_range: Vector2 = Vector2(0.5, 1.2)
 
 @onready var asteroids_layer: Control = $AsteroidsLayer
@@ -23,7 +23,7 @@ extends MinigameBase
 
 var spawned_count: int = 0
 var reached_count: int = 0
-var total_points: int = 0
+var destroyed_count: int = 0
 
 var spawn_timer: float = 0.0
 var next_spawn_time: float = 0.0
@@ -81,27 +81,26 @@ func _spawn_asteroid() -> void:
 		2: spawn_pos = Vector2(-40, randf_range(0, rect.size.y))
 		_: spawn_pos = Vector2(rect.size.x + 40, randf_range(0, rect.size.y))
 
-	# Tamaño random: determina velocidad y puntos (chico = rápido y valioso)
+	# Tamaño random: determina velocidad (chico = más rápido)
 	var asteroid_size: float = randf_range(size_range.x, size_range.y)
 	var size_ratio: float = (asteroid_size - size_range.x) / (size_range.y - size_range.x)  # 0 = chico, 1 = grande
 
 	var speed_range: Vector2 = _current_speed_range()
 	var asteroid_speed: float = lerp(speed_range.y, speed_range.x, size_ratio)  # chico -> más rápido
-	var asteroid_points: int = int(lerp(20.0, 5.0, size_ratio))                 # chico -> más puntos
 
 	asteroid.position = spawn_pos
 	asteroid.target_pos = target_area.position + target_area.size / 2.0
-	asteroid.setup(asteroid_size, asteroid_speed, asteroid_points)
+	asteroid.setup(asteroid_size, asteroid_speed, 0)   # los puntos ya no se usan para el score
 
 	asteroid.destroyed.connect(_on_asteroid_destroyed)
 	asteroid.reached_target.connect(_on_asteroid_reached_target)
 
 
-func _on_asteroid_destroyed(_asteroid: Asteroid, points: int) -> void:
-	total_points += points
+func _on_asteroid_destroyed(_asteroid: Asteroid, _points: int) -> void:
+	destroyed_count += 1
 	_update_label()
 
-	if total_points >= required_points:
+	if destroyed_count >= required_destroyed:
 		complete()
 		return
 
@@ -120,11 +119,11 @@ func _on_asteroid_reached_target(_asteroid: Asteroid) -> void:
 
 
 func _check_end_conditions() -> void:
-	# si ya se generaron todos y ninguno queda vivo, pero no se llegó al puntaje -> fallo
+	# si ya se generaron todos y ninguno queda vivo, pero no se destruyeron suficientes -> fallo
 	var asteroids_alive := asteroids_layer.get_child_count()
-	if spawned_count >= total_asteroids and asteroids_alive == 0 and total_points < required_points:
+	if spawned_count >= total_asteroids and asteroids_alive == 0 and destroyed_count < required_destroyed:
 		fail()
 
 
 func _update_label() -> void:
-	info_label.text = "Puntos: %d / %d" % [total_points, required_points]
+	info_label.text = "Destruidos: %d" % destroyed_count
