@@ -1,4 +1,5 @@
 CollisionShape3D
+CollisionPolygon3D
 StaticBody3D
 GridContainer
 ColorRect
@@ -11,4 +12,3 @@ CSGBox3D
 Label3D
 Sprite2D
 Area3D
-Panel
