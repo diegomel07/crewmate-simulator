@@ -31,6 +31,17 @@ func _on_minigame_ready() -> void:
 	display_grid.columns = grid_columns
 	button_grid.columns = grid_columns
 
+	# separación pareja entre celdas, así la grilla se ve prolija y no pegada
+	display_grid.add_theme_constant_override("h_separation", 4)
+	display_grid.add_theme_constant_override("v_separation", 4)
+	button_grid.add_theme_constant_override("h_separation", 8)
+	button_grid.add_theme_constant_override("v_separation", 8)
+
+	# que el GridContainer ocupe todo el espacio de su panel padre;
+	# si no, no hay "área extra" que repartir entre los botones que expanden
+	display_grid.set_anchors_preset(Control.PRESET_FULL_RECT)
+	button_grid.set_anchors_preset(Control.PRESET_FULL_RECT)
+
 	_spawn_display_cells()
 	_spawn_buttons()
 	_spawn_lights()
@@ -44,7 +55,10 @@ func _spawn_display_cells() -> void:
 		var cell: GridButton = grid_button_scene.instantiate()
 		display_grid.add_child(cell)
 		cell.index = i
-		cell.interactive = false   # solo se ve, nunca recibe clicks
+		cell.interactive = false        # solo se ve, nunca recibe clicks
+		cell.hide_when_idle = true      # invisible en reposo, solo se ve el flash
+		cell.highlight_color = Color(0.3, 0.6, 1.0)   # azul
+		cell.set_highlighted(false)     # aplica el estado invisible ya desde el inicio
 		display_cells.append(cell)
 
 
