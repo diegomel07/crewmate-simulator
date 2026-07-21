@@ -1,24 +1,38 @@
 [gd_scene format=3 uid="uid://bw8138gbw6rax"]
 
 [ext_resource type="Script" uid="uid://dluet615kl1xv" path="res://scenes/minigames/alignLine/AlignLineMinigame.gd" id="1_6ewyh"]
+[ext_resource type="Script" uid="uid://bwv0pg5x0y2ks" path="res://scenes/minigames/alignLine/DashedLine.gd" id="2_e7aow"]
+[ext_resource type="Texture2D" uid="uid://1chgjqnmnmt7" path="res://assets/ChatGPT Image 20 jul 2026, 22_50_21.png" id="2_rvo8m"]
 [ext_resource type="Script" uid="uid://d2akx1e1phvcm" path="res://scenes/minigames/alignLine/output_line.gd" id="2_s7jfk"]
+[ext_resource type="Texture2D" uid="uid://h86pt8auf7or" path="res://assets/slider.png" id="4_i8wwe"]
 
 [node name="AlignLineMinigame" type="Control" unique_id=1469372820]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.279
+anchor_top = 0.083000004
+anchor_right = 0.77500004
+anchor_bottom = 0.87500006
+offset_left = -0.40802002
+offset_top = 0.21599579
+offset_right = 0.19995117
+offset_bottom = 0.21582031
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6ewyh")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1619010069]
+[node name="Background" type="TextureRect" parent="." unique_id=1562859054]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = -3.0
+offset_right = 717.0
+offset_bottom = 737.7841
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.39941582, 0.39941582)
+texture = ExtResource("2_rvo8m")
 
 [node name="InstructionLabel" type="Label" parent="." unique_id=2057690923]
 layout_mode = 0
@@ -31,11 +45,12 @@ anchor_left = 0.044000003
 anchor_top = 0.012
 anchor_right = 0.52900004
 anchor_bottom = 0.96800005
-offset_left = 0.31199646
-offset_top = 0.2239995
-offset_right = -518.4081
-offset_bottom = -579.26404
-scale = Vector2(13.960001, 15.480001)
+offset_left = 44.832
+offset_top = 20.841408
+offset_right = 74.41199
+offset_bottom = -29.793
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ScreenBackground" type="ColorRect" parent="ScreenPanel" unique_id=123994127]
 layout_mode = 1
@@ -48,28 +63,22 @@ color = Color(0.14509805, 0.48235294, 0.24705882, 1)
 
 [node name="TargetGuide" type="Control" parent="ScreenPanel" unique_id=1153117622]
 layout_mode = 1
-anchor_left = 0.002
-anchor_top = 0.45400003
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.48800004
-offset_left = -0.0083667785
-offset_top = -0.007549286
-offset_right = -8.706652
-offset_bottom = 4.8340015
-scale = Vector2(1.2664757, 0.22222233)
+anchor_bottom = 1.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="ScreenPanel/TargetGuide" unique_id=493423669]
+[node name="ColorRect" type="Control" parent="ScreenPanel/TargetGuide" unique_id=864985776]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.3574659
-offset_top = 1.1627901
-offset_right = 1.3574657
-offset_bottom = 1.1627903
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.929692, 0.67739415)
+script = ExtResource("2_e7aow")
 
 [node name="OutputLine" type="Control" parent="ScreenPanel" unique_id=497060734]
 layout_mode = 1
@@ -79,9 +88,13 @@ script = ExtResource("2_s7jfk")
 [node name="CurveTrack" type="Control" parent="." unique_id=353032976]
 layout_mode = 1
 anchor_left = 0.69200003
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -0.184021
+anchor_top = 0.012
+anchor_right = 0.744
+anchor_bottom = 0.96800005
+offset_left = 57.176025
+offset_top = 8.841408
+offset_right = 140.43198
+offset_bottom = -26.793
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -90,26 +103,37 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DragHandle" type="Control" parent="CurveTrack" unique_id=1124900995]
 layout_mode = 1
-anchor_right = 0.113000005
-anchor_bottom = 0.062000003
-offset_right = -0.11500168
-offset_bottom = -0.1760025
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0000305
+offset_bottom = -385.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="DragHandleArt" type="ColorRect" parent="CurveTrack/DragHandle" unique_id=1463784628]
+[node name="DragHandleArt" type="TextureRect" parent="CurveTrack/DragHandle" unique_id=1015617301]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 92.0
+offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.32156864, 1, 1, 1)
+scale = Vector2(0.47588146, 0.47588146)
+texture = ExtResource("4_i8wwe")
 
 [node name="FeedbackLabel" type="Label" parent="." unique_id=735249831]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 69.0
+offset_top = 23.0
+offset_right = 109.0
+offset_bottom = 46.0

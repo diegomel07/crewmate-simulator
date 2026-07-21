@@ -1,4 +1,7 @@
-# res://scenes/minigames/align_line/OutputLine.gd
+# res://scenes/minigames/align_line/DashedLine.gd
+# Dibuja una línea horizontal punteada, centrada verticalmente en el nodo.
+# Usar este mismo script tanto en el hijo de TargetGuide (línea fija)
+# como en OutputLine (línea que se mueve), para que ambas se vean iguales.
 extends Control
 
 @export var color: Color = Color(1, 0, 0) # rojo
@@ -24,6 +27,9 @@ func _draw_dashed(from: Vector2, to: Vector2) -> void:
 		draw_line(seg_start, seg_end, color, thickness)
 		drawn += step
 
+# Godot no re-dibuja solo porque cambió el size del Control (por ejemplo
+# cuando AlignLineMinigame.gd hace target_guide.size = ...), así que forzamos
+# el redibujado si el tamaño cambia en tiempo de ejecución.
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_RESIZED:
 		queue_redraw()
