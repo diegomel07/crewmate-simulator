@@ -9,7 +9,7 @@ extends MinigameBase
 
 @onready var number_grid: GridContainer = $NumberGrid
 @onready var feedback_label: Label = $FeedbackLabel
-@onready var background: ColorRect = $Background
+@onready var background: TextureRect = $Background
 
 var tiles: Array[NumberTile] = []
 var next_expected: int = 1
@@ -18,7 +18,6 @@ var is_flashing: bool = false
 
 
 func _on_minigame_ready() -> void:
-	original_background_color = background.color
 	number_grid.columns = 5
 	_spawn_tiles()
 

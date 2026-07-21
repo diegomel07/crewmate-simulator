@@ -5,7 +5,7 @@ extends Control
 signal tile_pressed(value: int)
 
 @export var value: int = 1
-@export var idle_color: Color = Color(0.55, 0.62, 0.85)
+@export var idle_color: Color = Color(0.55, 0.62, 0.85, 0)
 @export var correct_color: Color = Color(0.55, 0.85, 0.35)
 
 @onready var art: Node = $TileArt          # TODO: tu arte acá (ColorRect / Sprite2D / TextureRect)
