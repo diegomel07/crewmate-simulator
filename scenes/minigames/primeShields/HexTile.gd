@@ -6,8 +6,8 @@ signal hex_clicked(tile: HexTile)
 
 @export var hex_radius: float = 42.0   # distancia del centro a cada vértice
 @export var is_red: bool = true
-@export var red_color: Color = Color(0.75, 0.25, 0.3)
-@export var white_color: Color = Color(0.85, 0.85, 0.85)
+@export var red_color: Color = Color(0.75, 0.25, 0.3, 0.7)
+@export var white_color: Color = Color(0.85, 0.85, 0.85, 0.5)
 @export var border_color: Color = Color(0.05, 0.1, 0.25)
 
 var polygon_points: PackedVector2Array = []
