@@ -224,7 +224,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.11183, -0.24715805, 58.554222)
 
 [node name="player" type="CharacterBody3D" parent="." unique_id=208098828]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.7252903e-08, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.389847, 1.3942175, 47.70143)
 script = ExtResource("2_44dfo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="player" unique_id=1667798891]
@@ -374,47 +374,43 @@ libraries/ = SubResource("AnimationLibrary_dif88")
 autoplay = &"idle"
 
 [node name="TaskStation" parent="." unique_id=962434791 instance=ExtResource("3_mt36p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7740045, -0.055623412, -6.540879)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.275732, -0.065051556, 23.745699)
 
 [node name="TaskStation2" parent="." unique_id=1643758419 instance=ExtResource("3_mt36p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.956552, -0.055623412, -6.540879)
+transform = Transform3D(0.8904512, 0, -0.45507872, 0, 1, 0, 0.45507872, 0, 0.8904512, 36.3529, 0.79124784, -3.8818731)
 task_id = "clear_asteroids"
 
 [node name="TaskStation3" parent="." unique_id=587437950 instance=ExtResource("3_mt36p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5227604, -0.055623412, -6.540879)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.84078, -0.055623412, 19.847939)
 task_id = "swipe_card"
 
 [node name="TaskStation4" parent="." unique_id=1095410184 instance=ExtResource("3_mt36p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.483618, -0.055623412, -6.540879)
+transform = Transform3D(-0.016004043, 0, 0.9998719, 0, 1, 0, -0.9998719, 0, -0.016004043, -48.831703, -0.055623412, 41.788307)
 task_id = "align_engine"
 
 [node name="TaskStation5" parent="." unique_id=1880788806 instance=ExtResource("3_mt36p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.924732, -0.055623412, -6.540879)
+transform = Transform3D(-0.01080342, 0, 0.99994165, 0, 1, 0, -0.99994165, 0, -0.01080342, -57.774586, -0.055623412, 17.804804)
 task_id = "memory"
 
 [node name="TaskStation6" parent="." unique_id=1175816102 instance=ExtResource("3_mt36p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.081387, -0.055623412, -6.540879)
+transform = Transform3D(0.8066716, 0, 0.59099996, 0, 1, 0, -0.59099996, 0, 0.8066716, -59.18549, -0.055623412, 9.222754)
 task_id = "unlock"
 
 [node name="TaskStation7" parent="." unique_id=585299172 instance=ExtResource("3_mt36p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.081387, -0.055623412, -6.540879)
-task_id = "primeShields"
-
-[node name="TaskStation8" parent="." unique_id=450825956 instance=ExtResource("3_mt36p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2753067, -0.055623412, -6.540879)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.843933, -0.055623412, 44.47669)
 task_id = "primeShields"
 
 [node name="TaskStation9" parent="." unique_id=1601269781 instance=ExtResource("3_mt36p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.361393, -0.055623412, -6.540879)
+transform = Transform3D(0.67810833, 0, -0.734962, 0, 1, 0, 0.734962, 0, 0.67810833, 62.81078, -0.055623412, 11.789868)
 task_id = "chartCourse"
 
 [node name="TaskStation10" parent="." unique_id=1373714713 instance=ExtResource("3_mt36p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.791646, 0.07292235, -6.3828278)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.276703, 0.07292235, 2.3903685)
 task_id = "clean_vent"
 
 [node name="TaskStation11" parent="." unique_id=958300542 instance=ExtResource("3_mt36p")]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.954935, 0.07292235, -6.3828278)
+transform = Transform3D(0.008360007, 0, -0.9999651, 0, 1, 0, 0.9999651, 0, 0.008360007, 10.909319, 0.07292235, 53.452217)
 task_id = "empty_trash"
 
 [node name="AutomaticSlidingDoor" parent="." unique_id=1606330643 instance=ExtResource("4_81fyy")]
