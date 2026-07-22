@@ -5,6 +5,7 @@ extends Area3D
 @export var interact_action: String = "interact"  # nombre de la acción en Input Map
 
 @onready var prompt_label: Label3D = $PromptLabel3D
+@onready var minimap_icon: Node3D = $MiniMapIcon
 
 var player_in_range: bool = false
 var is_completed: bool = false
@@ -36,17 +37,20 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _on_minigame_finished(finished_task_id: String, success: bool) -> void:
+	# Si la tarea terminada no es esta estación, ignoramos la señal
 	if finished_task_id != task_id:
 		return
 
 	if success:
+		# El jugador completó el minijuego
 		is_completed = true
 		prompt_label.visible = false
-		# TODO: tu arte acá — por ejemplo cambiar el material del
-		# MeshInstance3D a uno "completado" (verde, con un check, etc.)
-		print("Tarea completada: ", task_id)
+		
+		# Apagamos la X roja del minimapa
+		if minimap_icon:
+			minimap_icon.hide()
+			
 	else:
-		# el jugador falló o canceló, puede reintentar si sigue en rango
+		# El jugador falló o canceló, puede reintentar si sigue en rango
 		if player_in_range:
 			prompt_label.visible = true
-		print("Tarea fallada/cancelada: ", task_id)

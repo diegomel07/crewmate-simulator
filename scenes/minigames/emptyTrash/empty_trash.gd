@@ -21,7 +21,7 @@ func _ready() -> void:
 	$PhysicsContainer/TrapDoor.process_mode = Node.PROCESS_MODE_ALWAYS
 
 	randomize()
-	total_trash = randi_range(30, 45)
+	total_trash = randi_range(15, 30)
 	spawn_trash_items()
 	
 	exit_zone.body_entered.connect(_on_trash_exited)

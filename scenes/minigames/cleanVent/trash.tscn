@@ -2,10 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c1vxed8a0pao7" path="res://scenes/minigames/cleanVent/trash.gd" id="1_6rqs1"]
 
-[node name="Trash" type="ColorRect" unique_id=155371016]
+[node name="Trash" type="TextureRect" unique_id=882472641]
 offset_left = 166.0
 offset_top = 86.0
 offset_right = 229.0
 offset_bottom = 144.0
-color = Color(1, 0.23529412, 1, 1)
 script = ExtResource("1_6rqs1")

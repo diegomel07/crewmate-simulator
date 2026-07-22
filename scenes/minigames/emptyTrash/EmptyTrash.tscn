@@ -3,12 +3,17 @@
 [ext_resource type="Script" uid="uid://vqcslxb8f0tu" path="res://scenes/minigames/emptyTrash/empty_trash.gd" id="1_koi4i"]
 [ext_resource type="Script" uid="uid://csy28pm3sj04l" path="res://scenes/minigames/emptyTrash/lever_handle.gd" id="1_srkjh"]
 [ext_resource type="PackedScene" uid="uid://bd85inlm2k55o" path="res://scenes/minigames/emptyTrash/TrashPhysics.tscn" id="2_n8t3r"]
+[ext_resource type="Texture2D" uid="uid://dv3f263nwfgpj" path="res://assets/empty_trash/garbage_Base.png" id="3_ijevc"]
+[ext_resource type="Texture2D" uid="uid://tqrd5i0bvqfu" path="res://assets/empty_trash/garbage_lightShadow.png" id="4_cmetj"]
+[ext_resource type="Texture2D" uid="uid://c5a5a4b4pgd1j" path="res://assets/empty_trash/garbage_leverHandle.png" id="5_8sxf6"]
+[ext_resource type="Texture2D" uid="uid://6sagmbes6g0o" path="res://assets/empty_trash/garbage_leverBase.png" id="6_cmetj"]
+[ext_resource type="Texture2D" uid="uid://t25vflme8vvo" path="res://assets/empty_trash/garbage_leverBars.png" id="7_2utws"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yueou"]
-size = Vector2(12, 454)
+size = Vector2(18, 498)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_srkjh"]
-size = Vector2(471, 13)
+size = Vector2(575.5, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koi4i"]
 size = Vector2(680, 311.5)
@@ -25,13 +30,13 @@ offset_right = 1150.0
 offset_bottom = 650.0
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="ColorRect" type="ColorRect" parent="Background" unique_id=802507869]
+[node name="ColorRect" type="TextureRect" parent="Background" unique_id=358919571]
 layout_mode = 0
 offset_left = 175.0
 offset_top = 95.0
 offset_right = 1030.0
 offset_bottom = 550.0
-color = Color(0.6052743, 0.6052743, 0.6052743, 1)
+texture = ExtResource("3_ijevc")
 
 [node name="PhysicsContainer" type="Node2D" parent="." unique_id=641824014]
 process_mode = 3
@@ -40,56 +45,91 @@ process_mode = 3
 process_mode = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsContainer/LeftWall" unique_id=444995297]
-position = Vector2(183, 324)
+position = Vector2(176, 354)
 shape = SubResource("RectangleShape2D_yueou")
 
 [node name="RightWall" type="StaticBody2D" parent="PhysicsContainer" unique_id=696830372]
 process_mode = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsContainer/RightWall" unique_id=999453316]
-position = Vector2(660, 324)
+position = Vector2(772, 345)
 shape = SubResource("RectangleShape2D_yueou")
 
 [node name="TrapDoor" type="StaticBody2D" parent="PhysicsContainer" unique_id=984572711]
 process_mode = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsContainer/TrapDoor" unique_id=923308221]
-position = Vector2(419.5, 542.5)
+position = Vector2(475, 603)
 shape = SubResource("RectangleShape2D_srkjh")
 
 [node name="TrashSpawnArea" type="ReferenceRect" parent="PhysicsContainer" unique_id=1178579327]
 process_mode = 3
-offset_left = 234.0
-offset_top = 116.0
-offset_right = 607.0
-offset_bottom = 300.0
+offset_left = 322.0
+offset_top = 110.0
+offset_right = 594.0
+offset_bottom = 325.0
+
+[node name="GarbageLightShadow" type="TextureRect" parent="." unique_id=1443028509]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 103.0
+offset_right = 773.0
+offset_bottom = 599.0
+texture = ExtResource("4_cmetj")
+
+[node name="LeverBase" type="TextureRect" parent="." unique_id=1860781416]
+layout_mode = 0
+offset_left = 845.0
+offset_top = 354.0
+offset_right = 956.0
+offset_bottom = 408.0
+texture = ExtResource("6_cmetj")
+
+[node name="GarbageBars" type="TextureRect" parent="." unique_id=1137535534]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 316.0
+offset_right = 920.0
+offset_bottom = 386.0
+pivot_offset = Vector2(20, 70)
+texture = ExtResource("7_2utws")
 
 [node name="LeverUI" type="Control" parent="." unique_id=33903450]
 anchors_preset = 0
 offset_left = 662.0
-offset_top = 97.0
+offset_top = 99.0
 offset_right = 1028.0
-offset_bottom = 545.0
+offset_bottom = 547.0
 
 [node name="LeverTrack" type="ColorRect" parent="LeverUI" unique_id=1769221678]
+visible = false
 layout_mode = 0
-offset_left = 162.0
-offset_top = 66.0
-offset_right = 195.0
-offset_bottom = 361.0
+offset_left = 216.0
+offset_top = 188.0
+offset_right = 257.0
+offset_bottom = 373.0
 color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 
-[node name="LeverHandle" type="ColorRect" parent="LeverUI" unique_id=1767330918 groups=["trash"]]
+[node name="LeverHandle" type="ColorRect" parent="LeverUI" unique_id=1767330918 node_paths=PackedStringArray("lever_bars") groups=["trash"]]
 layout_mode = 0
-offset_left = 120.0
-offset_top = 62.0
-offset_right = 236.0
-offset_bottom = 102.0
-color = Color(0.77536, 0.14198518, 0.13255784, 1)
+offset_left = 183.0
+offset_top = 202.0
+offset_right = 299.0
+offset_bottom = 242.0
+color = Color(0.7764706, 0.14117648, 0.13333334, 0)
 script = ExtResource("1_srkjh")
+lever_bars = NodePath("../../GarbageBars")
+
+[node name="LeverHandle" type="TextureRect" parent="LeverUI/LeverHandle" unique_id=2136581941]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 5.0
+offset_right = 110.0
+offset_bottom = 49.0
+texture = ExtResource("5_8sxf6")
 
 [node name="ExitZone" type="Area2D" parent="." unique_id=2088463223]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitZone" unique_id=371292460]
-position = Vector2(427, 710.25)
+position = Vector2(507, 790)
 shape = SubResource("RectangleShape2D_koi4i")
