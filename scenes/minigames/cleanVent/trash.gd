@@ -1,4 +1,4 @@
-extends ColorRect
+extends TextureRect # Cambiado para que soporte imágenes
 
 signal item_cleaned
 
