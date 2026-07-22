@@ -1,24 +1,29 @@
 [gd_scene format=4 uid="uid://doovlgt7pjtt2"]
 
 [ext_resource type="PackedScene" uid="uid://ck82vuycphgwl" path="res://scenes/ship/Ship.tscn" id="1_4nkb8"]
+[ext_resource type="Shader" uid="uid://da7r5c5sp53ii" path="res://scenes/shaders/stars.gdshader" id="1_xafnq"]
 [ext_resource type="Script" uid="uid://klqr4eils1hr" path="res://scenes/first_person_controller.gd" id="2_44dfo"]
 [ext_resource type="PackedScene" uid="uid://hmlfpgoo4vg6" path="res://scenes/tasks/TaskStation.tscn" id="3_mt36p"]
 [ext_resource type="PackedScene" uid="uid://cf1lned1kvp6a" path="res://scenes/door/AutomaticSlidingDoor.tscn" id="4_81fyy"]
 [ext_resource type="PackedScene" uid="uid://drt4642f7ykul" path="res://scenes/map/layer/minimap_layer.tscn" id="5_4nkb8"]
 [ext_resource type="PackedScene" uid="uid://dwy0w777v1a06" path="res://scenes/map/viewport/minimap_viewport.tscn" id="6_xafnq"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdo8o"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nkb8"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Sky" id="Sky_ie1pn"]
-sky_material = SubResource("ProceduralSkyMaterial_fdo8o")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3ll4m"]
+shader = ExtResource("1_xafnq")
 
-[sub_resource type="Environment" id="Environment_dif88"]
+[sub_resource type="Sky" id="Sky_xafnq"]
+sky_material = SubResource("ShaderMaterial_3ll4m")
+
+[sub_resource type="Environment" id="Environment_3ll4m"]
 background_mode = 2
-sky = SubResource("Sky_ie1pn")
-tonemap_mode = 2
-glow_enabled = true
+background_energy_multiplier = 0.6
+sky = SubResource("Sky_xafnq")
+ambient_light_source = 2
+ambient_light_color = Color(0.13713597, 0.15548755, 0.25798422, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ernxy"]
 
@@ -211,14 +216,25 @@ viewport_path = NodePath("../MinimapViewport")
 
 [node name="world" type="Node3D" unique_id=145907840]
 
-[node name="env" type="Node" parent="." unique_id=364713149]
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=709791741]
+transform = Transform3D(1, 0, 0, 0, 0.0035604164, 0.9999936, 0, -0.9999936, 0.0035604164, 398.5256, 5.7063828, -441.22406)
+visible = false
+size = Vector3(4246.7686, 2506.5264, 1)
+material = SubResource("StandardMaterial3D_4nkb8")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="env" unique_id=952001313]
-environment = SubResource("Environment_dif88")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=72282669]
+environment = SubResource("Environment_3ll4m")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="env" unique_id=1175831819]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=174356412]
+transform = Transform3D(1, 0, 0, 0, -0.07621441, 0.9970915, 0, -0.9970915, -0.07621441, 13.487154, 26.166264, 16.719776)
+light_energy = 3.283
+light_indirect_energy = 4.111
+light_volumetric_fog_energy = 3.032
+light_angular_distance = 1.45
+directional_shadow_split_1 = 0.242
+directional_shadow_split_2 = 0.536
+directional_shadow_split_3 = 0.642
+directional_shadow_max_distance = 8192.0
 
 [node name="StaticBody3D" parent="." unique_id=859641290 instance=ExtResource("1_4nkb8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.11183, -0.24715805, 58.554222)
