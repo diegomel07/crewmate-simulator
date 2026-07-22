@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c5u2digbh76og"]
+
+[ext_resource type="Script" uid="uid://csrt183vm0m2n" path="res://scenes/minigames/chartCourse/waypoint.gd" id="1_hwlj1"]
+[ext_resource type="Texture2D" uid="uid://6mq1toqaqwlh" path="res://assets/nodo.png" id="2_kiglt"]
+
+[node name="Waypoint" type="Control" unique_id=1940095152]
+layout_mode = 3
+anchor_left = -0.014
+anchor_top = -0.023000002
+anchor_right = 0.016
+anchor_bottom = 0.029000001
+offset_left = 0.12800026
+offset_top = -0.095998764
+offset_right = -0.4320011
+offset_bottom = 0.20800018
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hwlj1")
+
+[node name="WaypointArt" type="TextureRect" parent="." unique_id=1006377202]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.96300006
+anchor_bottom = 0.92600006
+offset_right = 173.28378
+offset_bottom = 156.36304
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.16502789, 0.16502789)
+texture = ExtResource("2_kiglt")

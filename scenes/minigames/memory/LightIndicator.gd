@@ -11,13 +11,18 @@ extends Control
 func _ready() -> void:
 	size_flags_horizontal = Control.SIZE_SHRINK_CENTER   # <- esto es lo que faltaba
 	size_flags_vertical = Control.SIZE_SHRINK_CENTER     # <- y esto
-	set_anchors_preset(Control.PRESET_TOP_LEFT)
+	#set_anchors_preset(Control.PRESET_TOP_LEFT)
 	custom_minimum_size = Vector2(24, 24)
 	size = custom_minimum_size
 
 	if art is Control:
 		art.set_anchors_preset(Control.PRESET_FULL_RECT)
 		art.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		if art is TextureRect:
+			art.stretch_mode = TextureRect.STRETCH_SCALE
+			art.custom_minimum_size = Vector2.ZERO
+	else:
+		push_warning("LightIndicator: 'LightArt' no es un Control (es %s), va a ignorar el tamaño de 24x24." % art.get_class())
 
 	set_on(false)
 

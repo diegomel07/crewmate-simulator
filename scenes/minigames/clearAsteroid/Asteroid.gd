@@ -8,11 +8,15 @@ signal reached_target(asteroid: Asteroid)
 @export var rotation_speed_range: Vector2 = Vector2(-3.0, 3.0)  # radianes/seg
 @export var separation_radius: float = 50.0    # distancia mínima entre asteroides
 @export var separation_weight: float = 0.6     # qué tanto pesa "no chocar" vs ir al centro
+@export var off_screen_margin: float = 60.0    # margen extra antes de limpiar el asteroide
 
 var target_pos: Vector2
 var speed: float = 80.0
 var points: int = 10
 var rotation_speed: float = 0.0
+
+var _has_reached_target: bool = false
+var _travel_dir: Vector2 = Vector2.ZERO   # dirección congelada una vez que pasó el target
 
 @onready var art: Node = $AsteroidArt   # TODO: tu arte acá (Sprite2D / TextureRect)
 
@@ -38,15 +42,35 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	rotation += rotation_speed * delta
 
-	var dir_to_target: Vector2 = (target_pos - position).normalized()
-	var separation: Vector2 = _compute_separation()
+	if not _has_reached_target:
+		var dir_to_target: Vector2 = (target_pos - position).normalized()
+		var separation: Vector2 = _compute_separation()
 
-	var final_dir: Vector2 = (dir_to_target + separation * separation_weight).normalized()
-	position += final_dir * speed * delta
+		var final_dir: Vector2 = (dir_to_target + separation * separation_weight).normalized()
+		position += final_dir * speed * delta
 
-	if position.distance_to(target_pos) < 20.0:
-		reached_target.emit(self)
-		queue_free()
+		if position.distance_to(target_pos) < 20.0:
+			_has_reached_target = true
+			_travel_dir = final_dir   # se congela la dirección: sigue de largo en línea recta
+			reached_target.emit(self)
+	else:
+		# Ya pasó el target: no se destruye, sigue su camino hasta salir de pantalla.
+		position += _travel_dir * speed * delta
+		if _is_off_screen():
+			queue_free()
+
+
+func _is_off_screen() -> bool:
+	var bounds: Vector2 = _get_bounds()
+	var m := off_screen_margin
+	return position.x < -m or position.y < -m or position.x > bounds.x + m or position.y > bounds.y + m
+
+
+func _get_bounds() -> Vector2:
+	var parent := get_parent()
+	if parent is Control:
+		return (parent as Control).size
+	return get_viewport_rect().size
 
 
 func _compute_separation() -> Vector2:

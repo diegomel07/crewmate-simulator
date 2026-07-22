@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b5psk5fc6jghh"]
 
 [ext_resource type="Script" uid="uid://cnx8a8ibom5i" path="res://scenes/minigames/clearAsteroid/Asteroid.gd" id="1_i21dt"]
+[ext_resource type="Texture2D" uid="uid://bje6tb0em5um8" path="res://assets/Asteroid.webp" id="2_dqasf"]
 
 [node name="Asteroid" type="Control" unique_id=802021144]
 layout_mode = 3
@@ -10,13 +11,17 @@ offset_right = -0.36000443
 offset_bottom = -0.02400589
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.3599998, 1.3599998)
 script = ExtResource("1_i21dt")
 
-[node name="AsteroidArt" type="ColorRect" parent="." unique_id=1040321999]
+[node name="AsteroidArt" type="TextureRect" parent="." unique_id=1959585882]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 56.0
+offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.3870035, 0.0018790246, 0.7866017, 1)
+scale = Vector2(0.5182061, 0.5182061)
+texture = ExtResource("2_dqasf")

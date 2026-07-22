@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://djjrbwr22nacj"]
+
+[ext_resource type="Script" uid="uid://cb1tpiteb5235" path="res://scenes/minigames/chartCourse/ChartCourseMinigame.gd" id="1_gfq50"]
+[ext_resource type="Script" uid="uid://tsqnr1lwsiy8" path="res://scenes/minigames/chartCourse/Pathline.gd" id="2_mr0ls"]
+[ext_resource type="Texture2D" uid="uid://dt6gio0a22rrm" path="res://assets/back.png" id="2_pqkyo"]
+[ext_resource type="Texture2D" uid="uid://ciay2r81wffvc" path="res://assets/ship.png" id="4_rml53"]
+
+[node name="ChartCourseMinigame" type="Control" unique_id=788094516]
+layout_mode = 3
+anchor_left = 0.193
+anchor_top = 0.14500001
+anchor_right = 0.81600004
+anchor_bottom = 0.74100006
+offset_left = -0.33599854
+offset_top = 0.039993286
+offset_right = -0.032043457
+offset_bottom = -0.16802979
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gfq50")
+
+[node name="Background" type="TextureRect" parent="." unique_id=577898725]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 251.0
+offset_bottom = 133.0556
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7508846, 0.7508846)
+texture = ExtResource("2_pqkyo")
+
+[node name="PathLine" type="Control" parent="." unique_id=1929650082]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_mr0ls")
+
+[node name="WaypointsLayer" type="Control" parent="." unique_id=1186128629]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ShipIcon" type="Control" parent="." unique_id=500548426]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ShipArt" type="TextureRect" parent="ShipIcon" unique_id=658862324]
+layout_mode = 0
+offset_right = 215.0
+offset_bottom = 149.0
+scale = Vector2(0.2634564, 0.2634564)
+texture = ExtResource("4_rml53")
+
+[node name="FeedbackLabel" type="Label" parent="." unique_id=415295905]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

@@ -7,13 +7,17 @@ signal minigame_opened(task_id: String)
 var current_minigame: Node = null
 var current_task_id: String = ""
 
-# Mapea cada task_id a su escena. Agregar acá cualquier minijuego nuevo.
 var minigame_registry: Dictionary = {
 	"wires":           preload("res://scenes/minigames/wires/WiresMinigame.tscn"),
 	"swipe_card":      preload("res://scenes/minigames/swipeCard/SwipeCardMinigame.tscn"),
 	"clear_asteroids": preload("res://scenes/minigames/clearAsteroid/ClearAsteroidsMinigame.tscn"),
 	"align_engine":    preload("res://scenes/minigames/alignLine/AlignLineMinigame.tscn"),
-	"memory":          preload("res://scenes/minigames/memory/MemoryMinigame.tscn")
+	"memory":          preload("res://scenes/minigames/memory/MemoryMinigame.tscn"),
+	"unlock":          preload("res://scenes/minigames/unlockManifolds/UnlockManifoldsMinigame.tscn"),
+	"primeShields":    preload("res://scenes/minigames/primeShields/PrimeShieldsMinigame.tscn"),
+	"chartCourse":     preload("res://scenes/minigames/chartCourse/ChartCourseMinigame.tscn"),
+	"clean_vent":      preload("res://scenes/minigames/cleanVent/CleanVent.tscn"),
+	"empty_trash":     preload("res://scenes/minigames/emptyTrash/EmptyTrash.tscn")
 }
 
 var canvas_layer: CanvasLayer
@@ -21,7 +25,7 @@ var canvas_layer: CanvasLayer
 
 func _ready() -> void:
 	canvas_layer = CanvasLayer.new()
-	canvas_layer.layer = 100  # por encima de todo lo demás
+	canvas_layer.layer = 100  
 	canvas_layer.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(canvas_layer)
 
@@ -45,8 +49,8 @@ func open_minigame(task_id: String) -> void:
 	current_minigame.minigame_completed.connect(_on_minigame_completed)
 	current_minigame.minigame_failed.connect(_on_minigame_failed)
 
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)   # <- agregar esto
-	get_tree().paused = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)   
+	#get_tree().paused = true
 	minigame_opened.emit(task_id)
 
 
@@ -58,8 +62,8 @@ func _close_minigame(success: bool) -> void:
 		current_minigame = null
 
 	current_task_id = ""
-	get_tree().paused = false
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)   # <- agregar esto
+	#get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)   
 
 	minigame_finished.emit(finished_task_id, success)
 

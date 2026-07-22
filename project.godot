@@ -21,6 +21,7 @@ MinigameManager="*uid://dximde8mbbh83"
 [global_group]
 
 player=""
+trash="trash item from empty trash minigame"
 
 [input]
 

@@ -3,7 +3,7 @@ class_name AlignLineMinigame
 extends MinigameBase
 
 @export var tolerance: float = 1
-@export var hold_duration: float = 5
+@export var hold_duration: float = 3
 @export var line_thickness: float = 4.0
 @export var target_thickness: float = 3
 
@@ -26,6 +26,24 @@ var align_time: float = 0.0
 
 
 func _on_minigame_ready() -> void:
+	# Esperamos a que termine el layout pass de los anchors.
+	# Si leemos .size acá mismo en el primer frame, puede venir en 0
+	# o con un tamaño viejo, y eso rompe todos los cálculos de abajo
+	# (por eso la línea se movía "más rápido" de lo esperado y el
+	# panel se veía mal armado).
+	await get_tree().process_frame
+
+	# Red de seguridad: si en el editor alguien vuelve a arrastrar una esquina
+	# con la herramienta equivocada, Godot le mete un "scale" al Control en vez
+	# de redimensionarlo con anchors, y eso rompe toda la matemática de abajo
+	# (.size no tiene en cuenta el scale). Forzamos scale=1 en los nodos clave.
+	screen_panel.scale = Vector2.ONE
+	output_line.scale = Vector2.ONE
+	curve_track.scale = Vector2.ONE
+	for child in target_guide.get_children():
+		if child is Control:
+			child.scale = Vector2.ONE
+
 	drag_handle.set_anchors_preset(Control.PRESET_TOP_LEFT)
 	drag_handle.size = Vector2(40, 30)
 	drag_handle.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -80,7 +98,10 @@ func _update_handle_position() -> void:
 
 func _update_output_line_position() -> void:
 	# mapeamos la posición de la flecha (0..track_bottom) a la altura de ScreenPanel
-	var ratio: float = (handle_y - track_top) / (track_bottom - track_top)
+	var track_range: float = track_bottom - track_top
+	if track_range <= 0.0:
+		return
+	var ratio: float = (handle_y - track_top) / track_range
 	var line_y: float = ratio * screen_panel.size.y
 	output_line.position.y = line_y - output_line.size.y / 2.0
 
