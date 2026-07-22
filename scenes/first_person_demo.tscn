@@ -206,7 +206,7 @@ _data = {
 &"swing_02": SubResource("Animation_cdtcq")
 }
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_a7cwy"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_4nkb8"]
 viewport_path = NodePath("../MinimapViewport")
 
 [node name="world" type="Node3D" unique_id=145907840]
@@ -235,6 +235,7 @@ shape = SubResource("CapsuleShape3D_ernxy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="player/head" unique_id=704437726]
+cull_mask = 1048571
 
 [node name="view_model" type="Node3D" parent="player/head/Camera3D" unique_id=683811304]
 
@@ -467,7 +468,7 @@ transform = Transform3D(-6.441815e-08, 0, -1.62, 0, 0.7321257, 0, 1.4737155, 0, 
 [node name="MinimapLayer" parent="." unique_id=1355307307 instance=ExtResource("5_4nkb8")]
 
 [node name="MinimapDisplay" parent="MinimapLayer/MinimapContainer" parent_id_path=PackedInt32Array(1355307307, 865392931) index="0" unique_id=173635941]
-texture = SubResource("ViewportTexture_a7cwy")
+texture = SubResource("ViewportTexture_4nkb8")
 
 [node name="MinimapViewport" parent="." unique_id=1775704983 instance=ExtResource("6_xafnq")]
 
