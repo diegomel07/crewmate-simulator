@@ -221,7 +221,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="StaticBody3D" parent="." unique_id=859641290 instance=ExtResource("1_4nkb8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.11183, -0.24715805, 58.554222)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.102715, -0.20773792, 58.567673)
 
 [node name="player" type="CharacterBody3D" parent="." unique_id=208098828]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.389847, 1.3942175, 47.70143)
@@ -235,6 +235,7 @@ shape = SubResource("CapsuleShape3D_ernxy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="player/head" unique_id=704437726]
+cull_mask = 1048571
 
 [node name="view_model" type="Node3D" parent="player/head/Camera3D" unique_id=683811304]
 
@@ -414,7 +415,55 @@ transform = Transform3D(0.008360007, 0, -0.9999651, 0, 1, 0, 0.9999651, 0, 0.008
 task_id = "empty_trash"
 
 [node name="AutomaticSlidingDoor" parent="." unique_id=1606330643 instance=ExtResource("4_81fyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.702015, 0, 15.784744)
+transform = Transform3D(1.1781939, 0, 0, 0, 0.7321257, 0, 0, 0, 1.62, 5.923912, -0.0073105097, 16.325027)
+
+[node name="AutomaticSlidingDoor11" parent="." unique_id=1490645087 instance=ExtResource("4_81fyy")]
+transform = Transform3D(-5.1500493e-08, 0, -1.62, 0, 0.7321257, 0, 1.1781939, 0, -7.081245e-08, -35.481003, -0.0073105097, 17.809608)
+
+[node name="AutomaticSlidingDoor12" parent="." unique_id=616082421 instance=ExtResource("4_81fyy")]
+transform = Transform3D(-5.1500493e-08, 0, -1.62, 0, 0.7321257, 0, 1.1781939, 0, -7.081245e-08, -49.04282, -0.0073105097, 17.809608)
+
+[node name="AutomaticSlidingDoor9" parent="." unique_id=671857850 instance=ExtResource("4_81fyy")]
+transform = Transform3D(1.1781939, 0, 0, 0, 0.7321257, 0, 0, 0, 1.62, -42.2423, -0.0073105097, 28.23989)
+
+[node name="AutomaticSlidingDoor13" parent="." unique_id=18844231 instance=ExtResource("4_81fyy")]
+transform = Transform3D(1.1781939, 0, 0, 0, 0.7321257, 0, 0, 0, 1.62, -42.2423, -0.0073105097, 7.8441296)
+
+[node name="AutomaticSlidingDoor4" parent="." unique_id=896965250 instance=ExtResource("4_81fyy")]
+transform = Transform3D(1.1781939, 0, 0, 0, 0.7321257, 0, 0, 0, 1.62, 5.923912, -0.0073105097, 26.537443)
+
+[node name="AutomaticSlidingDoor7" parent="." unique_id=558046797 instance=ExtResource("4_81fyy")]
+transform = Transform3D(1.1781939, 0, 0, 0, 0.7321257, 0, 0, 0, 1.62, -20.300722, -0.0073105097, 40.407143)
+
+[node name="AutomaticSlidingDoor15" parent="." unique_id=775558720 instance=ExtResource("4_81fyy")]
+transform = Transform3D(0.77168876, 0, 0, 0, 0.7321257, 0, 0, 0, 1.62, -18.970913, -0.0073105097, 2.8430471)
+
+[node name="AutomaticSlidingDoor5" parent="." unique_id=1252419065 instance=ExtResource("4_81fyy")]
+transform = Transform3D(-5.6725135e-08, 0, -1.62, 0, 0.7321257, 0, 1.2977198, 0, -7.081245e-08, 11.4886675, -0.0073105097, 38.285973)
+
+[node name="AutomaticSlidingDoor17" parent="." unique_id=1777494555 instance=ExtResource("4_81fyy")]
+transform = Transform3D(-5.6725135e-08, 0, -1.62, 0, 0.7321257, 0, 1.2977198, 0, -7.081245e-08, 28.389872, -0.0073105097, 38.285973)
+
+[node name="AutomaticSlidingDoor2" parent="." unique_id=854613809 instance=ExtResource("4_81fyy")]
+transform = Transform3D(-6.441815e-08, 0, -1.62, 0, 0.7321257, 0, 1.4737155, 0, -7.081245e-08, -11.123866, 0, -1.3042331)
+
+[node name="AutomaticSlidingDoor16" parent="." unique_id=574783568 instance=ExtResource("4_81fyy")]
+transform = Transform3D(-6.441815e-08, 0, -1.62, 0, 0.7321257, 0, 1.4737155, 0, -7.081245e-08, 52.761257, 0, 15.817593)
+
+[node name="AutomaticSlidingDoor14" parent="." unique_id=104076821 instance=ExtResource("4_81fyy")]
+transform = Transform3D(-6.441815e-08, 0, -1.62, 0, 0.7321257, 0, 1.4737155, 0, -7.081245e-08, -35.35133, 0, -1.3042331)
+
+[node name="AutomaticSlidingDoor6" parent="." unique_id=1195971185 instance=ExtResource("4_81fyy")]
+transform = Transform3D(-6.441815e-08, 0, -1.62, 0, 0.7321257, 0, 1.4737155, 0, -7.081245e-08, -7.792666, 0, 44.729015)
+
+[node name="AutomaticSlidingDoor8" parent="." unique_id=1355855845 instance=ExtResource("4_81fyy")]
+transform = Transform3D(-6.441815e-08, 0, -1.62, 0, 0.7321257, 0, 1.4737155, 0, -7.081245e-08, -35.558636, 0, 36.448154)
+
+[node name="AutomaticSlidingDoor10" parent="." unique_id=1509895307 instance=ExtResource("4_81fyy")]
+transform = Transform3D(-6.441815e-08, 0, -1.62, 0, 0.7321257, 0, 1.4737155, 0, -7.081245e-08, -35.558636, 0, 36.448154)
+
+[node name="AutomaticSlidingDoor3" parent="." unique_id=1987652694 instance=ExtResource("4_81fyy")]
+transform = Transform3D(-6.441815e-08, 0, -1.62, 0, 0.7321257, 0, 1.4737155, 0, -7.081245e-08, 23.26458, 0, -1.4703423)
 
 [node name="MinimapLayer" parent="." unique_id=1355307307 instance=ExtResource("5_4nkb8")]
 

@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cx13r5qhg8fua" path="res://scenes/minigames/cleanVent/clean_vent.gd" id="1_jvd77"]
 [ext_resource type="PackedScene" uid="uid://c8keceyckb6f6" path="res://scenes/minigames/cleanVent/trash.tscn" id="1_ps8dp"]
+[ext_resource type="Texture2D" uid="uid://dhpdbln7ae3jg" path="res://assets/CleanVent/panel_boarding_Face0006.png" id="3_6iabj"]
+[ext_resource type="Texture2D" uid="uid://dqyvs5msfank2" path="res://assets/CleanVent/dsdsdadsadsa.jpg" id="3_l7pjr"]
+[ext_resource type="Texture2D" uid="uid://cqu26d7tdvfbt" path="res://assets/CleanVent/panel_speciment_undertalesans.png" id="4_nk4pt"]
+[ext_resource type="Texture2D" uid="uid://bgurhnsfimjhh" path="res://assets/CleanVent/sortingSamples_stone2.png" id="5_e717m"]
 
 [node name="CleanVent" type="Control" unique_id=636513786]
 layout_mode = 3
@@ -14,6 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jvd77")
 trash_scene = ExtResource("1_ps8dp")
+trash_textures = Array[Texture2D]([ExtResource("3_6iabj"), ExtResource("4_nk4pt"), ExtResource("5_e717m")])
 
 [node name="Background" type="ColorRect" parent="." unique_id=959956533]
 layout_mode = 0
@@ -21,12 +26,14 @@ offset_right = 1150.0
 offset_bottom = 650.0
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="VentArea" type="ColorRect" parent="." unique_id=881166690]
+[node name="VentArea" type="TextureRect" parent="." unique_id=432793027]
 layout_mode = 0
 offset_left = 175.0
 offset_top = 95.0
 offset_right = 980.0
 offset_bottom = 550.0
+texture = ExtResource("3_l7pjr")
+expand_mode = 1
 
 [node name="TrashContainer" type="Control" parent="." unique_id=1579628502]
 anchors_preset = 0

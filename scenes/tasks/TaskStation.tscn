@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://hmlfpgoo4vg6"]
 
 [ext_resource type="Script" uid="uid://dwwk5u5axocux" path="res://scenes/tasks/TaskStation.gd" id="1_ipxl1"]
+[ext_resource type="Script" uid="uid://dx6wyefw0fn7g" path="res://scenes/tasks/mini_map_icon.gd" id="2_c74cb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ipxl1"]
 size = Vector3(1, 0.7666321, 1.0620117)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ipxl1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c74cb"]
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 1)
 
 [node name="TaskStation" type="Area3D" unique_id=962434791]
 script = ExtResource("1_ipxl1")
@@ -21,3 +28,21 @@ size = Vector3(1, 1.0288086, 1.0541992)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.94355726, 0.8847674)
 billboard = 1
 text = "Presiona E"
+
+[node name="MiniMapIcon" type="Node3D" parent="." unique_id=490118413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.480138, 0)
+script = ExtResource("2_c74cb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MiniMapIcon" unique_id=362014496]
+transform = Transform3D(0.33086383, 0, 2.2370222, 0, 1, 0, -0.33086383, 0, 2.2370222, 0, 0, 0)
+layers = 4
+cast_shadow = 0
+mesh = SubResource("BoxMesh_ipxl1")
+surface_material_override/0 = SubResource("StandardMaterial3D_c74cb")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MiniMapIcon" unique_id=1337526898]
+transform = Transform3D(0.38522965, 0, -1.7957187, 0, 0.99999994, 0, 0.26559338, 0, 2.6045983, 0, 0, 0)
+layers = 4
+cast_shadow = 0
+mesh = SubResource("BoxMesh_ipxl1")
+surface_material_override/0 = SubResource("StandardMaterial3D_c74cb")

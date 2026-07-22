@@ -1,19 +1,24 @@
 [gd_scene format=3 uid="uid://bd85inlm2k55o"]
 
 [ext_resource type="Script" uid="uid://nbymayunvy3v" path="res://scenes/minigames/emptyTrash/trash_physics.gd" id="1_g0hot"]
+[ext_resource type="Texture2D" uid="uid://dsqsk4tvej317" path="res://assets/empty_trash/garbage_1.png" id="2_cyfku"]
+[ext_resource type="Texture2D" uid="uid://bwqlhyvi4bmtu" path="res://assets/empty_trash/garbage_2.png" id="3_fi5og"]
+[ext_resource type="Texture2D" uid="uid://c3ny1dliox00h" path="res://assets/empty_trash/teleporter.png" id="4_u1qdd"]
+[ext_resource type="Texture2D" uid="uid://g1xo7xxu57h8" path="res://assets/empty_trash/diamond.png" id="5_ajqsy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kl1i"]
-size = Vector2(39, 39)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ddpp5"]
+radius = 36.0
+height = 72.0
 
 [node name="TrashPhysics" type="RigidBody2D" unique_id=114481687]
 process_mode = 3
 script = ExtResource("1_g0hot")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1794066057]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(1, 1, 0.41568628, 1)
+trash_textures = Array[Texture2D]([ExtResource("2_cyfku"), ExtResource("3_fi5og"), ExtResource("4_u1qdd"), ExtResource("5_ajqsy")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2122774836]
-position = Vector2(20, 20)
-shape = SubResource("RectangleShape2D_3kl1i")
+position = Vector2(99, 37)
+shape = SubResource("CapsuleShape2D_ddpp5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=236760983]
+position = Vector2(95, 37)
+texture = ExtResource("2_cyfku")
