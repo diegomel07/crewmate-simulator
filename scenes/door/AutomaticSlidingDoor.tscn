@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cf1lned1kvp6a"]
 
-[ext_resource type="Script" uid="uid://mt6ipycrtkwq" path="res://scripts/automatic_sliding_door.gd" id="1_lt6yk"]
+[ext_resource type="Script" uid="uid://mt6ipycrtkwq" path="res://scenes/door/automatic_sliding_door.gd" id="1_lt6yk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kphme"]
 size = Vector3(1.8, 3, 0.15)
@@ -9,21 +9,22 @@ size = Vector3(1.8, 3, 0.15)
 size = Vector3(1.8, 3, 0.25)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r71v1"]
-size = Vector3(1.8, 3, 0.15)
+size = Vector3(1.8, 3, 0.25112304)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ug36p"]
 size = Vector3(1.8, 3, 0.25)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w6k1d"]
-size = Vector3(6, 4, 8)
+size = Vector3(6, 4, 3.0498695)
 
 [node name="AutomaticSlidingDoor" type="Node3D" unique_id=1606330643]
+transform = Transform3D(1.1781939, 0, 0, 0, 0.7321257, 0, 0, 0, 1.62, 0, 0, 0)
 script = ExtResource("1_lt6yk")
 
 [node name="LeftDoor" type="AnimatableBody3D" parent="." unique_id=1757975605]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LeftDoor" unique_id=934562670]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 1.5, 0)
+transform = Transform3D(1.0000005, 0, 0, 0, 1.0000005, 0, 0, 0, 1.6360555, -0.90000045, 1.5000011, -0.006157834)
 shape = SubResource("BoxShape3D_kphme")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LeftDoor" unique_id=134163773]
@@ -33,7 +34,7 @@ mesh = SubResource("BoxMesh_w6k1d")
 [node name="RightDoor" type="AnimatableBody3D" parent="." unique_id=121664087]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RightDoor" unique_id=439852161]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 1.5, 0)
+transform = Transform3D(1.0000005, 0, 0, 0, 1.0000005, 0, 0, 0, 1.0000005, 0.9000003, 1.5000006, -0.013598634)
 shape = SubResource("BoxShape3D_r71v1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RightDoor" unique_id=1150581669]
@@ -43,5 +44,5 @@ mesh = SubResource("BoxMesh_ug36p")
 [node name="DoorTrigger" type="Area3D" parent="." unique_id=1651000524]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DoorTrigger" unique_id=541562394]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(1.0000005, 0, 0, 0, 1.0000005, 0, 0, 0, 1.0000005, 0, 2.000001, -0.02335927)
 shape = SubResource("BoxShape3D_w6k1d")
