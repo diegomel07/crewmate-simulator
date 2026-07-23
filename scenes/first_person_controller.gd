@@ -2,11 +2,16 @@ extends CharacterBody3D
 
 @onready var head = $head
 @onready var animation_player: AnimationPlayer = $head/Camera3D/view_model/AnimationPlayer
+@onready var footstep_player: AudioStreamPlayer3D = $FootstepPlayer
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
 var mouse_sens = 0.3
+
+@export var footstep_sounds: Array[AudioStream] = []
+@export var footstep_interval: float = 0.45  # tiempo entre pasos (ajusta según animación/velocidad)
+var footstep_timer: float = 0.0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -55,4 +60,25 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
+	_handle_footsteps(direction, delta)
+
 	move_and_slide()
+
+func _handle_footsteps(direction: Vector3, delta: float) -> void:
+	var is_moving := direction.length() > 0.1 and is_on_floor()
+	
+	if is_moving:
+		footstep_timer -= delta
+		if footstep_timer <= 0.0:
+			_play_footstep()
+			footstep_timer = footstep_interval
+	else:
+		footstep_timer = 0.0  # para que el próximo paso suene apenas empiece a moverse
+		
+func _play_footstep() -> void:
+	if footstep_sounds.is_empty() or not footstep_player:
+		return
+	
+	var random_index := randi() % footstep_sounds.size()
+	footstep_player.stream = footstep_sounds[random_index]
+	footstep_player.play()

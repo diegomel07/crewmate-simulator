@@ -2,30 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://c3w80lqk50p4o" path="res://assets/among_us_-_map_the_skeld/scene.gltf" id="1_dkinh"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dkinh"]
-sky_top_color = Color(0, 0, 0, 1)
-sky_horizon_color = Color(0, 0, 0, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_dqc1n"]
-sky_material = SubResource("ProceduralSkyMaterial_dkinh")
-
-[sub_resource type="Environment" id="Environment_ob0mf"]
-background_mode = 2
-sky = SubResource("Sky_dqc1n")
-tonemap_mode = 2
-glow_enabled = true
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_dkinh"]
 size = Vector3(15.513809, 1, 11.652054)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dqc1n"]
 size = Vector3(2.061493, 1, 2.197937)
 
-[node name="StaticBody3D" type="StaticBody3D" unique_id=859641290]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ob0mf"]
+size = Vector3(8.219788, 1, 24.401855)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=27094266]
-environment = SubResource("Environment_ob0mf")
+[node name="StaticBody3D" type="StaticBody3D" unique_id=859641290]
 
 [node name="Sketchfab_Scene" parent="." unique_id=1677884464 instance=ExtResource("1_dkinh")]
 
@@ -37,3 +23,9 @@ debug_color = Color(8.2573805, 11.84926, 0, 0.41960785)
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=623212776]
 transform = Transform3D(7.742393, 0, 0, 0, 0.35759196, 0, 0, 0, 7.87637, 54.431114, -0.17644382, -26.942898)
 shape = SubResource("BoxShape3D_dqc1n")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=959639942]
+transform = Transform3D(1.9682786, 0, 0, 0, 1, 0, 0, 0, 0.82278943, 130.41702, -0.5594101, -41.474003)
+shape = SubResource("BoxShape3D_ob0mf")
+
+[editable path="Sketchfab_Scene"]
