@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cf1lned1kvp6a"]
 
 [ext_resource type="Script" uid="uid://mt6ipycrtkwq" path="res://scenes/door/automatic_sliding_door.gd" id="1_lt6yk"]
+[ext_resource type="Texture2D" uid="uid://n1tagjpvrq36" path="res://assets/door/door.jpg" id="2_0nrfc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kphme"]
 size = Vector3(1.8, 3, 0.15)
@@ -8,11 +9,33 @@ size = Vector3(1.8, 3, 0.15)
 [sub_resource type="BoxMesh" id="BoxMesh_w6k1d"]
 size = Vector3(1.8, 3, 0.25)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nrfc"]
+albedo_texture = ExtResource("2_0nrfc")
+metallic = 0.6
+metallic_specular = 0.4
+roughness = 0.2
+uv1_scale = Vector3(-1, 1, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_0nrfc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iqt27"]
+albedo_texture = ExtResource("2_0nrfc")
+emission_enabled = true
+emission = Color(0, 0.8980392, 1, 1)
+emission_energy_multiplier = 10.0
+emission_texture = ExtResource("2_0nrfc")
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_r71v1"]
 size = Vector3(1.8, 3, 0.25112304)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ug36p"]
 size = Vector3(1.8, 3, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0j1ox"]
+albedo_texture = ExtResource("2_0nrfc")
+metallic = 0.6
+metallic_specular = 0.4
+roughness = 0.2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w6k1d"]
 size = Vector3(6, 4, 3.0498695)
@@ -28,8 +51,49 @@ transform = Transform3D(1.0000005, 0, 0, 0, 1.0000005, 0, 0, 0, 1.6360555, -0.90
 shape = SubResource("BoxShape3D_kphme")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LeftDoor" unique_id=134163773]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 1.5, 0)
+transform = Transform3D(-0.9999894, 0, 0.004607574, 0, 1, 0, -0.004607574, 0, -0.9999896, -0.9, 1.5, 0)
 mesh = SubResource("BoxMesh_w6k1d")
+surface_material_override/0 = SubResource("StandardMaterial3D_0nrfc")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="LeftDoor" unique_id=614091810]
+transform = Transform3D(0.6666285, 0, 0, 0, 0.036170036, 0, 0, 0, 1.3102812, -1.4537966, 1.4963527, 0.13553621)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="LeftDoor" unique_id=566873589]
+transform = Transform3D(0.8847309, 0, 0, 0, 0.036170036, 0, 0, 0, 1.3102812, -1.3446792, 1.0182471, 0.13553636)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="LeftDoor" unique_id=752885786]
+transform = Transform3D(0.645545, 0, 0, 0, 0.032598242, 0, 0, 0, 1.3102812, -0.3299718, 0.84703356, 0.13553636)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="LeftDoor" unique_id=1227161424]
+transform = Transform3D(0.26743034, 0.014287969, 0, -0.17480826, 0.021858444, 0, 0, 0, 1.3102812, -0.78819424, 0.9328017, 0.13553636)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="LeftDoor" unique_id=1685200493]
+transform = Transform3D(-0.83165026, 0, -1.1454841e-07, 0, 0.032598246, 0, 7.2705255e-08, 0, -1.3102812, -0.9142835, 2.0625296, -0.14264256)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="LeftDoor" unique_id=1722942113]
+transform = Transform3D(-0.27844417, 0.022721464, 1.12742285e-07, 0.27066174, 0.023374792, -2.0261167e-08, -2.8143859e-08, 1.5936049e-09, -1.3102812, -1.4692713, 2.1878579, -0.14264275)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="LeftDoor" unique_id=650263971]
+transform = Transform3D(-0.28304005, 0, -1.14548406e-07, 0, 0.032598246, 0, 2.4744196e-08, 0, -1.3102812, -0.1455375, 2.2175672, -0.14264277)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="LeftDoor" unique_id=801896986]
+transform = Transform3D(-0.22557715, -0.008231, -0.09608934, -0.1525142, 0.012227281, 0.012113262, 0.013085059, 0.00061968475, -1.5153254, -0.40272084, 2.14263, -0.14264292)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
 
 [node name="RightDoor" type="AnimatableBody3D" parent="." unique_id=121664087]
 
@@ -40,8 +104,50 @@ shape = SubResource("BoxShape3D_r71v1")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RightDoor" unique_id=1150581669]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 1.5, 0)
 mesh = SubResource("BoxMesh_ug36p")
+surface_material_override/0 = SubResource("StandardMaterial3D_0j1ox")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="RightDoor" unique_id=770703028]
+transform = Transform3D(0.6666285, 0, 0, 0, 0.036170036, 0, 0, 0, 1.310281, 1.4541234, 1.4963527, 0.1355362)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="RightDoor" unique_id=200850652]
+transform = Transform3D(-0.25137693, 0.0161179, 0, -0.1971968, -0.02054632, 0, 0, 0, 1.3102812, 0.7686786, 0.9328017, 0.13553636)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="RightDoor" unique_id=5329526]
+transform = Transform3D(0.8847309, 0, 0, 0, 0.036170036, 0, 0, 0, 1.3102812, 1.3303261, 1.0182471, 0.13553636)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="RightDoor" unique_id=2131065782]
+transform = Transform3D(0.645545, 0, 0, 0, 0.032598242, 0, 0, 0, 1.3102812, 0.3179178, 0.84703356, 0.13553636)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="RightDoor" unique_id=630465890]
+transform = Transform3D(-0.83165026, 0, -1.1454841e-07, 0, 0.032598246, 0, 7.270525e-08, 0, -1.3102812, 0.901388, 2.0625296, -0.14264254)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="RightDoor" unique_id=1124092399]
+transform = Transform3D(0.29036805, 0.021644108, 8.5655095e-08, 0.25782806, -0.024375768, 7.6056196e-08, 3.3947686e-08, 0, -1.3102812, 1.4281616, 2.1878579, -0.14264268)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="RightDoor" unique_id=1230408083]
+transform = Transform3D(-0.28304005, 0, -1.14548406e-07, 0, 0.032598246, 0, 2.474419e-08, 0, -1.3102812, 0.13579717, 2.2175672, -0.14264272)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="RightDoor" unique_id=973826190]
+transform = Transform3D(-0.211678, 0.016340483, -9.631806e-08, 0.1362604, 0.025384648, 6.20014e-08, 2.20081e-08, 0, -1.3102812, 0.37484604, 2.1389306, -0.14264281)
+mesh = SubResource("QuadMesh_0nrfc")
+surface_material_override/0 = SubResource("StandardMaterial3D_iqt27")
 
 [node name="DoorTrigger" type="Area3D" parent="." unique_id=1651000524]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DoorTrigger" unique_id=541562394]
 transform = Transform3D(1.0000005, 0, 0, 0, 1.0000005, 0, 0, 0, 1.0000005, 0, 2.000001, -0.02335927)
