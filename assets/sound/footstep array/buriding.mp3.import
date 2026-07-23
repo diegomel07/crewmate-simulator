@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2vm3fxcj06h8"
+path="res://.godot/imported/buriding.mp3-6035d92fa2eabd3ad95b1980a740b695.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/footstep array/buriding.mp3"
+dest_files=["res://.godot/imported/buriding.mp3-6035d92fa2eabd3ad95b1980a740b695.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
