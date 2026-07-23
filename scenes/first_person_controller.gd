@@ -11,6 +11,8 @@ var mouse_sens = 0.3
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	add_to_group("player")
+	#var ui = preload("res://ui/TaskCounterUI.tscn").instantiate()
+	#get_tree().root.add_child(ui)
 
 func _input(event):
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:

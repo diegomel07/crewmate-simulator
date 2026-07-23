@@ -29,8 +29,6 @@ func _ready() -> void:
 	
 	trigger_area.body_entered.connect(_on_body_entered)
 	trigger_area.body_exited.connect(_on_body_exited)
-	
-	print("Puerta automática lista: ", name)
 
 func _on_body_entered(body: Node3D) -> void:
 	if _is_player(body):

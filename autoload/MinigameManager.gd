@@ -6,6 +6,7 @@ signal minigame_opened(task_id: String)
 
 var current_minigame: Node = null
 var current_task_id: String = ""
+var cant_minigames_completed: int = 0
 
 var minigame_registry: Dictionary = {
 	"wires":           preload("res://scenes/minigames/wires/WiresMinigame.tscn"),
@@ -69,6 +70,9 @@ func _close_minigame(success: bool) -> void:
 
 
 func _on_minigame_completed() -> void:
+	cant_minigames_completed += 1
+	if cant_minigames_completed == 10:
+		print("helou evry nianbghhhhhhhhhhhhhhhhh")
 	_close_minigame(true)
 
 
