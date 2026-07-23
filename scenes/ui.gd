@@ -4,7 +4,10 @@ extends CanvasLayer
 @onready var final_warning: Label = $FinalWarning
 @onready var final_video: VideoStreamPlayer = $VideoStreamPlayer
 @onready var killer: Node3D = $"amongus-final"
+
 @onready var task_complete_sound: AudioStreamPlayer = $Scream
+@onready var death_sound: AudioStreamPlayer = $Death
+
 
 func _ready() -> void:
 	_update_label()
@@ -27,5 +30,6 @@ func _update_label() -> void:
 	
 func _on_area_3d_body_entered(body):
 	if body.name == "player":
+		death_sound.play()
 		final_video.visible = true
 		final_video.play()

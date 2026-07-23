@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://oblbg0mqw1ie"
+path="res://.godot/imported/Among us imposter killing sound effect.mp3-1f76923e658b27c96910c880bc16d1b9.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/death/Among us imposter killing sound effect.mp3"
+dest_files=["res://.godot/imported/Among us imposter killing sound effect.mp3-1f76923e658b27c96910c880bc16d1b9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
