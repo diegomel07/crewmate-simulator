@@ -10,7 +10,8 @@
 [ext_resource type="Script" uid="uid://cu8qlbqfj7x8b" path="res://scenes/ui.gd" id="7_xafnq"]
 [ext_resource type="AudioStream" uid="uid://cnccft6jgvl8y" path="res://assets/sound/clip_6WQVubf6QvI_0-15_77d59871.mp3" id="8_3ll4m"]
 [ext_resource type="VideoStream" uid="uid://bsyteq0kjd8gi" path="res://assets/among-us-kill-animations-s.ogv" id="9_eysbe"]
-[ext_resource type="Script" uid="uid://dt42kiebtofyw" path="res://scenes/ambient_sound_manager.gd" id="9_tgtvd"]
+[ext_resource type="Script" uid="uid://dfj4y57dg652d" path="res://scenes/ambient_sound_manager.gd" id="9_tgtvd"]
+[ext_resource type="PackedScene" uid="uid://bvib67677bri0" path="res://assets/amongus-final.glb" id="10_l81oi"]
 [ext_resource type="AudioStream" uid="uid://b7kxg0k6rfpe0" path="res://assets/sound/scream/scary scream - Horror sounds  creepy sounds #sounds #scary.mp3" id="12_5dsab"]
 [ext_resource type="AudioStream" uid="uid://oblbg0mqw1ie" path="res://assets/sound/death/Among us imposter killing sound effect.mp3" id="13_juymw"]
 [ext_resource type="AudioStream" uid="uid://enm8jxijjpw3" path="res://assets/sound/random ass sounds/clip_WahfwuW76o0_0-3_e7fcd94b.mp3" id="14_vrnee"]
@@ -143,14 +144,14 @@ shadow_mesh = SubResource("ArrayMesh_0lubg")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tgtvd"]
 albedo_color = Color(0, 0, 1, 1)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_5dsab"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_vrnee"]
 viewport_path = NodePath("../MinimapViewport")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_02wln"]
+size = Vector3(1.6872559, 2.718872, 1.7532959)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ll4m"]
 font_size = 40
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_iyw81"]
-size = Vector3(16.801895, 4.8656616, 15.079987)
 
 [node name="world" type="Node3D" unique_id=145907840]
 
@@ -306,7 +307,7 @@ transform = Transform3D(-5.467534e-08, 0, -1.3749859, 0, 1, 0, 0.90970105, 0, -4
 visible = false
 
 [node name="MinimapDisplay" parent="MinimapLayer/MinimapContainer" parent_id_path=PackedInt32Array(1355307307, 865392931) index="0" unique_id=173635941]
-texture = SubResource("ViewportTexture_5dsab")
+texture = SubResource("ViewportTexture_vrnee")
 
 [node name="MinimapViewport" parent="." unique_id=1775704983 instance=ExtResource("6_xafnq")]
 
@@ -318,6 +319,17 @@ autoplay = true
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=700429751]
 script = ExtResource("7_xafnq")
+
+[node name="amongus-final" parent="UI" unique_id=1105281925 instance=ExtResource("10_l81oi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.955886, 1.2224674, -6.821986)
+visible = false
+
+[node name="Area3D" type="Area3D" parent="UI/amongus-final" unique_id=877280628]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="UI/amongus-final/Area3D" unique_id=976604718]
+transform = Transform3D(6.9202156, 0, 0, 0, 1, 0, 0, 0, 6.1736126, -0.29297686, 0.85943604, 3.5521634)
+shape = SubResource("BoxShape3D_02wln")
 
 [node name="TaskLabel" type="Label" parent="UI" unique_id=1959340109]
 offset_left = 7.0
@@ -367,14 +379,6 @@ stream = ExtResource("12_5dsab")
 [node name="Death" type="AudioStreamPlayer" parent="UI" unique_id=1159351505]
 stream = ExtResource("13_juymw")
 
-[node name="UI_amongus-final#Area3D" type="Area3D" parent="." unique_id=1236919473]
-transform = Transform3D(0.7436503, 0, 0, 0, 1, 0, 0, 0, 0.9501206, 0.12545204, -1.2172616, 2.949804)
-monitoring = false
-
-[node name="UI_amongus-final_Area3D#CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2031982619]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26352692, 0.6363833, 0.92155457)
-shape = SubResource("BoxShape3D_iyw81")
-
 [node name="AmbientSoundManager" type="Node" parent="." unique_id=1203667569]
 script = ExtResource("9_tgtvd")
 ambient_sounds = Array[AudioStream]([ExtResource("14_vrnee"), ExtResource("15_l81oi"), ExtResource("16_02wln"), ExtResource("17_uogwn"), ExtResource("18_jgic8"), ExtResource("19_es685")])
@@ -382,6 +386,8 @@ max_interval = 50.0
 play_chance = 0.95
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="AmbientSoundManager" unique_id=1297790141]
+
+[connection signal="body_entered" from="UI/amongus-final/Area3D" to="UI" method="_on_area_3d_body_entered"]
 
 [editable path="shi"]
 [editable path="shi/Sketchfab_Scene"]
