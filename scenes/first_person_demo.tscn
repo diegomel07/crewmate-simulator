@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://doovlgt7pjtt2"]
+[gd_scene format=3 uid="uid://cl37664ufdjrj"]
 
 [ext_resource type="PackedScene" uid="uid://ck82vuycphgwl" path="res://scenes/ship/Ship.tscn" id="1_4nkb8"]
 [ext_resource type="Texture2D" uid="uid://c466hswpsttm7" path="res://assets/HDR_hazy_nebulae.hdr" id="1_xafnq"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://drt4642f7ykul" path="res://scenes/map/layer/minimap_layer.tscn" id="5_4nkb8"]
 [ext_resource type="PackedScene" uid="uid://dwy0w777v1a06" path="res://scenes/map/viewport/minimap_viewport.tscn" id="6_xafnq"]
 [ext_resource type="AudioStream" uid="uid://cnccft6jgvl8y" path="res://assets/sound/clip_6WQVubf6QvI_0-15_77d59871.mp3" id="8_3ll4m"]
-[ext_resource type="Script" uid="uid://o5ctemhaydqw" path="res://scenes/ambient_sound_manager.gd" id="9_tgtvd"]
+[ext_resource type="Script" path="res://scenes/ambient_sound_manager.gd" id="9_tgtvd"]
 [ext_resource type="AudioStream" uid="uid://enm8jxijjpw3" path="res://assets/sound/clip_WahfwuW76o0_0-3_e7fcd94b.mp3" id="10_iyw81"]
 [ext_resource type="AudioStream" uid="uid://2vm3fxcj06h8" path="res://assets/sound/footstep array/buriding.mp3" id="11_w1do3"]
 [ext_resource type="AudioStream" uid="uid://battqeauxyiam" path="res://assets/sound/footstep array/metal pipes.mp3" id="12_jhvw7"]
@@ -31,7 +31,7 @@ ambient_light_source = 3
 ambient_light_color = Color(0.13713597, 0.15548755, 0.25798422, 1)
 ambient_light_sky_contribution = 0.17
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_tgtvd"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_w1do3"]
 viewport_path = NodePath("../MinimapViewport")
 
 [node name="world" type="Node3D" unique_id=145907840]
@@ -139,7 +139,7 @@ transform = Transform3D(-5.467534e-08, 0, -1.3749859, 0, 1, 0, 0.90970105, 0, -4
 [node name="MinimapLayer" parent="." unique_id=1355307307 instance=ExtResource("5_4nkb8")]
 
 [node name="MinimapDisplay" parent="MinimapLayer/MinimapContainer" parent_id_path=PackedInt32Array(1355307307, 865392931) index="0" unique_id=173635941]
-texture = SubResource("ViewportTexture_tgtvd")
+texture = SubResource("ViewportTexture_w1do3")
 
 [node name="MinimapViewport" parent="." unique_id=1775704983 instance=ExtResource("6_xafnq")]
 

@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+#julian gei
 @onready var head = $head
 @onready var animation_player: AnimationPlayer = $head/Camera3D/view_model/AnimationPlayer
 @onready var footstep_player: AudioStreamPlayer3D = $FootstepPlayer
