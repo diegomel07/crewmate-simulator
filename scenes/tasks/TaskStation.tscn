@@ -4,13 +4,13 @@
 [ext_resource type="Script" uid="uid://dx6wyefw0fn7g" path="res://scenes/tasks/mini_map_icon.gd" id="2_c74cb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ipxl1"]
-size = Vector3(1, 0.7666321, 1.0620117)
+size = Vector3(2.4668427, 1.0831642, 1.8563538)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ipxl1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c74cb"]
 shading_mode = 0
-albedo_color = Color(1, 0, 0, 1)
+albedo_color = Color(1, 1, 0, 1)
 
 [node name="TaskStation" type="Area3D" unique_id=962434791]
 script = ExtResource("1_ipxl1")
@@ -46,3 +46,9 @@ layers = 4
 cast_shadow = 0
 mesh = SubResource("BoxMesh_ipxl1")
 surface_material_override/0 = SubResource("StandardMaterial3D_c74cb")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=131910047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.7791998, 0, 0, 0)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 3.576116

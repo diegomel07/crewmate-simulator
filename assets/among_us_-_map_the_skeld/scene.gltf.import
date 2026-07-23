@@ -37,6 +37,360 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0066_Honey/Object_4": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0080_DarkC/Object_6": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0080_DarkC/Object_8": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0080_DarkC/Object_9": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0087_Cyan/Object_11": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0135_DarkG/Object_13": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0135_DarkG/Object_14": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0135_DarkG/Object_15": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0135_DarkG/Object_16": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0135_DarkG/Object_17": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0135_DarkG/Object_19": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0135_DarkG/Object_20": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/0135_DarkG/Object_21": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Caja_tex02/Object_23": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Caja_tex03/Object_25": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Caja_textu/Object_27": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_A04/Object_29": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_B05/Object_31": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_B05/Object_33": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_B06/Object_35": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_C01/Object_37": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_C03/Object_39": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_D02/Object_41": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_D04/Object_43": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_D04/Object_44": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_E03/Object_46": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_F04/Object_48": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_F06/Object_50": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_H01/Object_52": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_H03/Object_54": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_H04/Object_56": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_I04/Object_58": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_I04/Object_59": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_I04/Object_60": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_I06/Object_62": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_I07/Object_64": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_J01/Object_66": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_J02/Object_68": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_J08/Object_70": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_K04/Object_72": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_K08/Object_74": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_L02/Object_76": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_L11/Object_78": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_L11/Object_79": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_L11/Object_80": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_M00/Object_82": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_M05/Object_84": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_M08/Object_86": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_M08/Object_87": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_M08/Object_88": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Color_M08/Object_89": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Foregrou/Object_91": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Formica_Bl/Object_93": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/FrontColor/Object_95": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Metal_Stee/Object_97": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_164": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_165": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_166": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_167": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_168": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_169": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_170": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_171": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_172": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_173": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_174": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_175": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_176": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_177": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_178": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_179": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_180": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_181": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_182": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_183": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_184": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_185": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_186": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_187": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_188": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Object_189": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/PISO_MED01/Object_99": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/PISO_MED02/Object_101": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Quartz_Lig/Object_103": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Transluc01/Object_105": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Translucen/Object_107": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/Water_Dark/Object_109": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_B01/Object_111": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_B05/Object_113": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_D01/Object_115": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_D04/Object_117": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_D04/Object_118": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_D04/Object_119": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_D04/Object_120": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_H03/Object_122": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_H03/Object_124": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_H04/Object_126": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_I06/Object_128": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_M07/Object_130": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/_Color_M07/Object_131": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/monitor_3/Object_133": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/motores_pi/Object_135": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/pared_alma/Object_137": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/pared_cafe/Object_139": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/pared_escu/Object_141": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/paredes_me/Object_143": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/piso_comun/Object_145": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/piso_pasil/Object_147": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/piso_pasil/Object_148": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/piso_tex01/Object_150": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/piso_tex01/Object_151": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/piso_tex02/Object_153": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/piso_tex03/Object_155": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/piso_textu/Object_157": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/reactor_pa/Object_159": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/separador/Object_161": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/AmongUs - Mapa Final-detalles_3ds/Model/textura_ma/Object_163": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

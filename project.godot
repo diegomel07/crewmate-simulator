@@ -11,12 +11,16 @@ config_version=5
 [application]
 
 config/name="AmongusTasks"
-run/main_scene="uid://doovlgt7pjtt2"
+run/main_scene="uid://cl37664ufdjrj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
 MinigameManager="*uid://dximde8mbbh83"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [global_group]
 
@@ -73,3 +77,4 @@ toggle_map={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+anti_aliasing/quality/msaa_3d=2
