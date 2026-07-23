@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://drt4642f7ykul" path="res://scenes/map/layer/minimap_layer.tscn" id="5_4nkb8"]
 [ext_resource type="PackedScene" uid="uid://dwy0w777v1a06" path="res://scenes/map/viewport/minimap_viewport.tscn" id="6_xafnq"]
 [ext_resource type="AudioStream" uid="uid://cnccft6jgvl8y" path="res://assets/sound/clip_6WQVubf6QvI_0-15_77d59871.mp3" id="8_3ll4m"]
-[ext_resource type="Script" path="res://scenes/ambient_sound_manager.gd" id="9_tgtvd"]
+[ext_resource type="Script" uid="uid://o5ctemhaydqw" path="res://scenes/ambient_sound_manager.gd" id="9_tgtvd"]
 [ext_resource type="AudioStream" uid="uid://enm8jxijjpw3" path="res://assets/sound/clip_WahfwuW76o0_0-3_e7fcd94b.mp3" id="10_iyw81"]
 [ext_resource type="AudioStream" uid="uid://2vm3fxcj06h8" path="res://assets/sound/footstep array/buriding.mp3" id="11_w1do3"]
 [ext_resource type="AudioStream" uid="uid://battqeauxyiam" path="res://assets/sound/footstep array/metal pipes.mp3" id="12_jhvw7"]

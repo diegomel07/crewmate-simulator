@@ -1,6 +1,8 @@
 extends Node
 @onready var audio_player: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
+#gei
+
 @export var ambient_sounds: Array[AudioStream] = []
 @export var min_interval: float = 15.0   # segundos mínimos entre sonidos
 @export var max_interval: float = 60.0   # segundos máximos entre sonidos
