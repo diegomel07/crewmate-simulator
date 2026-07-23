@@ -13,13 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://bvib67677bri0" path="res://assets/amongus-final.glb" id="10_iyw81"]
 [ext_resource type="AudioStream" uid="uid://b7kxg0k6rfpe0" path="res://assets/sound/scream/scary scream - Horror sounds  creepy sounds #sounds #scary.mp3" id="12_5dsab"]
 [ext_resource type="AudioStream" uid="uid://oblbg0mqw1ie" path="res://assets/sound/death/Among us imposter killing sound effect.mp3" id="13_juymw"]
-[ext_resource type="Script" uid="uid://o5ctemhaydqw" path="res://scenes/ambient_sound_manager.gd" id="9_tgtvd"]
-[ext_resource type="AudioStream" uid="uid://enm8jxijjpw3" path="res://assets/sound/clip_WahfwuW76o0_0-3_e7fcd94b.mp3" id="10_iyw81"]
-[ext_resource type="AudioStream" uid="uid://2vm3fxcj06h8" path="res://assets/sound/footstep array/buriding.mp3" id="11_w1do3"]
-[ext_resource type="AudioStream" uid="uid://battqeauxyiam" path="res://assets/sound/footstep array/metal pipes.mp3" id="12_jhvw7"]
-[ext_resource type="AudioStream" uid="uid://dk32h3v007p8w" path="res://assets/sound/footstep array/metal stress.mp3" id="13_7in4t"]
-[ext_resource type="AudioStream" uid="uid://xl4i8vyl3vlk" path="res://assets/sound/footstep array/screeching.mp3" id="14_teq5g"]
-[ext_resource type="AudioStream" uid="uid://r0si8jibvfnt" path="res://assets/sound/footstep array/static.mp3" id="15_vrnee"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xafnq"]
 panorama = ExtResource("1_xafnq")
@@ -388,15 +381,5 @@ stream = ExtResource("13_juymw")
 [editable path="shi/Sketchfab_Scene"]
 [editable path="player"]
 [editable path="TaskStations/TaskStation3"]
-[node name="AmbientSoundManager" type="Node" parent="." unique_id=420143718]
-script = ExtResource("9_tgtvd")
-ambient_sounds = Array[AudioStream]([ExtResource("10_iyw81"), ExtResource("11_w1do3"), ExtResource("12_jhvw7"), ExtResource("13_7in4t"), ExtResource("14_teq5g"), ExtResource("15_vrnee")])
-max_interval = 50.0
-play_chance = 0.95
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="AmbientSoundManager" unique_id=2108603173]
-
-[editable path="StaticBody3D"]
-[editable path="StaticBody3D/Sketchfab_Scene"]
 [editable path="MinimapLayer"]
 [editable path="MinimapViewport"]
