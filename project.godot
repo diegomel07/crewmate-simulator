@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 MinigameManager="*uid://dximde8mbbh83"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [global_group]
 
 player=""

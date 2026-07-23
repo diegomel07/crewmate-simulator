@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dx6wyefw0fn7g" path="res://scenes/tasks/mini_map_icon.gd" id="2_c74cb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ipxl1"]
-size = Vector3(1, 0.7666321, 1.0620117)
+size = Vector3(2.4668427, 1.0831642, 1.8563538)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ipxl1"]
 
