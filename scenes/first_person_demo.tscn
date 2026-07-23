@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://cnccft6jgvl8y" path="res://assets/sound/clip_6WQVubf6QvI_0-15_77d59871.mp3" id="8_3ll4m"]
 [ext_resource type="VideoStream" uid="uid://bsyteq0kjd8gi" path="res://assets/among-us-kill-animations-s.ogv" id="9_eysbe"]
 [ext_resource type="PackedScene" uid="uid://bvib67677bri0" path="res://assets/amongus-final.glb" id="10_iyw81"]
+[ext_resource type="AudioStream" uid="uid://b7kxg0k6rfpe0" path="res://assets/sound/scream/scary scream - Horror sounds  creepy sounds #sounds #scary.mp3" id="12_5dsab"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xafnq"]
 panorama = ExtResource("1_xafnq")
@@ -135,11 +136,11 @@ shadow_mesh = SubResource("ArrayMesh_0lubg")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tgtvd"]
 albedo_color = Color(0, 0, 1, 1)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_5dsab"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_iyw81"]
 viewport_path = NodePath("../MinimapViewport")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iyw81"]
-size = Vector3(16.801895, 3.5692139, 12.913879)
+size = Vector3(16.801895, 4.8656616, 15.079987)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ll4m"]
 font_size = 40
@@ -300,7 +301,7 @@ transform = Transform3D(-5.467534e-08, 0, -1.3749859, 0, 1, 0, 0.90970105, 0, -4
 visible = false
 
 [node name="MinimapDisplay" parent="MinimapLayer/MinimapContainer" parent_id_path=PackedInt32Array(1355307307, 865392931) index="0" unique_id=173635941]
-texture = SubResource("ViewportTexture_5dsab")
+texture = SubResource("ViewportTexture_iyw81")
 
 [node name="MinimapViewport" parent="." unique_id=1775704983 instance=ExtResource("6_xafnq")]
 
@@ -314,15 +315,15 @@ autoplay = true
 script = ExtResource("7_xafnq")
 
 [node name="amongus-final" parent="UI" unique_id=1858475320 instance=ExtResource("10_iyw81")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.973982, 1.6674871, -6.37654)
-visible = false
 
 [node name="Area3D" type="Area3D" parent="UI/amongus-final" unique_id=1236919473]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12545204, 1.2111633, 2.949804)
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="UI/amongus-final/Area3D" unique_id=2031982619]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26352692, 1.2846069, 2.0046082)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26352692, 0.6363833, 0.92155457)
 shape = SubResource("BoxShape3D_iyw81")
 
 [node name="TaskLabel" type="Label" parent="UI" unique_id=1959340109]
@@ -366,6 +367,9 @@ grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("9_eysbe")
 expand = true
+
+[node name="Scream" type="AudioStreamPlayer" parent="UI" unique_id=1505886613]
+stream = ExtResource("12_5dsab")
 
 [connection signal="body_entered" from="UI/amongus-final/Area3D" to="UI" method="_on_area_3d_body_entered"]
 
