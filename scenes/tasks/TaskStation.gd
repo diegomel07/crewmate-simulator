@@ -49,6 +49,7 @@ func _on_minigame_finished(finished_task_id: String, success: bool) -> void:
 		# Apagamos la X roja del minimapa
 		if minimap_icon:
 			minimap_icon.hide()
+			$OmniLight3D.visible = false
 			
 	else:
 		# El jugador falló o canceló, puede reintentar si sigue en rango
