@@ -137,7 +137,7 @@ shadow_mesh = SubResource("ArrayMesh_0lubg")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tgtvd"]
 albedo_color = Color(0, 0, 1, 1)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_5dsab"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_juymw"]
 viewport_path = NodePath("../MinimapViewport")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iyw81"]
@@ -302,7 +302,7 @@ transform = Transform3D(-5.467534e-08, 0, -1.3749859, 0, 1, 0, 0.90970105, 0, -4
 visible = false
 
 [node name="MinimapDisplay" parent="MinimapLayer/MinimapContainer" parent_id_path=PackedInt32Array(1355307307, 865392931) index="0" unique_id=173635941]
-texture = SubResource("ViewportTexture_5dsab")
+texture = SubResource("ViewportTexture_juymw")
 
 [node name="MinimapViewport" parent="." unique_id=1775704983 instance=ExtResource("6_xafnq")]
 
@@ -318,6 +318,7 @@ script = ExtResource("7_xafnq")
 [node name="amongus-final" parent="UI" unique_id=1858475320 instance=ExtResource("10_iyw81")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.973982, 1.6674871, -6.37654)
+visible = false
 
 [node name="Area3D" type="Area3D" parent="UI/amongus-final" unique_id=1236919473]
 transform = Transform3D(0.7436503, 0, 0, 0, 1, 0, 0, 0, 0.9501206, 0.12545204, -1.2172616, 2.949804)

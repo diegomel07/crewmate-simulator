@@ -16,7 +16,7 @@ func _ready() -> void:
 func _on_minigame_finished(_task_id: String, success: bool) -> void:
 	if success:
 		_update_label()
-		if MinigameManager.cant_minigames_completed == 10:
+		if MinigameManager.cant_minigames_completed == 1:
 			$"amongus-final/Area3D".monitoring = true
 			final_warning.visible = true
 			killer.visible = true
