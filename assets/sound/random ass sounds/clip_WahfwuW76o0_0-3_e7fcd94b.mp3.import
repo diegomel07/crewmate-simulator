@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://enm8jxijjpw3"
+path="res://.godot/imported/clip_WahfwuW76o0_0-3_e7fcd94b.mp3-c5e4d0401d1a8d50841986848004e54b.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/random ass sounds/clip_WahfwuW76o0_0-3_e7fcd94b.mp3"
+dest_files=["res://.godot/imported/clip_WahfwuW76o0_0-3_e7fcd94b.mp3-c5e4d0401d1a8d50841986848004e54b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

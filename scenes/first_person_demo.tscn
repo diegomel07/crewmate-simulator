@@ -10,17 +10,15 @@
 [ext_resource type="Script" uid="uid://cu8qlbqfj7x8b" path="res://scenes/ui.gd" id="7_xafnq"]
 [ext_resource type="AudioStream" uid="uid://cnccft6jgvl8y" path="res://assets/sound/clip_6WQVubf6QvI_0-15_77d59871.mp3" id="8_3ll4m"]
 [ext_resource type="VideoStream" uid="uid://bsyteq0kjd8gi" path="res://assets/among-us-kill-animations-s.ogv" id="9_eysbe"]
-[ext_resource type="PackedScene" uid="uid://bvib67677bri0" path="res://assets/amongus-final.glb" id="10_iyw81"]
+[ext_resource type="Script" uid="uid://dt42kiebtofyw" path="res://scenes/ambient_sound_manager.gd" id="9_tgtvd"]
 [ext_resource type="AudioStream" uid="uid://b7kxg0k6rfpe0" path="res://assets/sound/scream/scary scream - Horror sounds  creepy sounds #sounds #scary.mp3" id="12_5dsab"]
 [ext_resource type="AudioStream" uid="uid://oblbg0mqw1ie" path="res://assets/sound/death/Among us imposter killing sound effect.mp3" id="13_juymw"]
-[ext_resource type="Script" path="res://scenes/ambient_sound_manager.gd" id="9_tgtvd"]
-[ext_resource type="Script" uid="uid://o5ctemhaydqw" path="res://scenes/ambient_sound_manager.gd" id="9_tgtvd"]
-[ext_resource type="AudioStream" uid="uid://enm8jxijjpw3" path="res://assets/sound/clip_WahfwuW76o0_0-3_e7fcd94b.mp3" id="10_iyw81"]
-[ext_resource type="AudioStream" uid="uid://2vm3fxcj06h8" path="res://assets/sound/footstep array/buriding.mp3" id="11_w1do3"]
-[ext_resource type="AudioStream" uid="uid://battqeauxyiam" path="res://assets/sound/footstep array/metal pipes.mp3" id="12_jhvw7"]
-[ext_resource type="AudioStream" uid="uid://dk32h3v007p8w" path="res://assets/sound/footstep array/metal stress.mp3" id="13_7in4t"]
-[ext_resource type="AudioStream" uid="uid://xl4i8vyl3vlk" path="res://assets/sound/footstep array/screeching.mp3" id="14_teq5g"]
-[ext_resource type="AudioStream" uid="uid://r0si8jibvfnt" path="res://assets/sound/footstep array/static.mp3" id="15_vrnee"]
+[ext_resource type="AudioStream" uid="uid://enm8jxijjpw3" path="res://assets/sound/random ass sounds/clip_WahfwuW76o0_0-3_e7fcd94b.mp3" id="14_vrnee"]
+[ext_resource type="AudioStream" uid="uid://djt3w51rudq1h" path="res://assets/sound/random ass sounds/buridin.mp3" id="15_l81oi"]
+[ext_resource type="AudioStream" uid="uid://o3fof0yuddpq" path="res://assets/sound/random ass sounds/metal pipes.mp3" id="16_02wln"]
+[ext_resource type="AudioStream" uid="uid://k36ueq8fr3kf" path="res://assets/sound/random ass sounds/screeching.mp3" id="17_uogwn"]
+[ext_resource type="AudioStream" uid="uid://bs4i70plydlw6" path="res://assets/sound/random ass sounds/static.mp3" id="18_jgic8"]
+[ext_resource type="AudioStream" uid="uid://b581byce4vdfl" path="res://assets/sound/random ass sounds/stress metal.mp3" id="19_es685"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xafnq"]
 panorama = ExtResource("1_xafnq")
@@ -145,21 +143,19 @@ shadow_mesh = SubResource("ArrayMesh_0lubg")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tgtvd"]
 albedo_color = Color(0, 0, 1, 1)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_juymw"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_5dsab"]
 viewport_path = NodePath("../MinimapViewport")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_iyw81"]
-size = Vector3(16.801895, 4.8656616, 15.079987)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ll4m"]
 font_size = 40
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iyw81"]
+size = Vector3(16.801895, 4.8656616, 15.079987)
 
 [node name="world" type="Node3D" unique_id=145907840]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=72282669]
 environment = SubResource("Environment_3ll4m")
-
-[node name="env" type="Node" parent="." unique_id=364713149]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=174356412]
 transform = Transform3D(-0.21661429, 0.97125924, -0.098659866, -0.3827194, 0.00848598, 0.92382586, 0.89811146, 0.23787288, 0.36988145, 13.487154, 26.166264, 16.719776)
@@ -310,7 +306,7 @@ transform = Transform3D(-5.467534e-08, 0, -1.3749859, 0, 1, 0, 0.90970105, 0, -4
 visible = false
 
 [node name="MinimapDisplay" parent="MinimapLayer/MinimapContainer" parent_id_path=PackedInt32Array(1355307307, 865392931) index="0" unique_id=173635941]
-texture = SubResource("ViewportTexture_juymw")
+texture = SubResource("ViewportTexture_5dsab")
 
 [node name="MinimapViewport" parent="." unique_id=1775704983 instance=ExtResource("6_xafnq")]
 
@@ -322,19 +318,6 @@ autoplay = true
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=700429751]
 script = ExtResource("7_xafnq")
-
-[node name="amongus-final" parent="UI" unique_id=1858475320 instance=ExtResource("10_iyw81")]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.973982, 1.6674871, -6.37654)
-visible = false
-
-[node name="Area3D" type="Area3D" parent="UI/amongus-final" unique_id=1236919473]
-transform = Transform3D(0.7436503, 0, 0, 0, 1, 0, 0, 0, 0.9501206, 0.12545204, -1.2172616, 2.949804)
-monitoring = false
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="UI/amongus-final/Area3D" unique_id=2031982619]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26352692, 0.6363833, 0.92155457)
-shape = SubResource("BoxShape3D_iyw81")
 
 [node name="TaskLabel" type="Label" parent="UI" unique_id=1959340109]
 offset_left = 7.0
@@ -384,7 +367,21 @@ stream = ExtResource("12_5dsab")
 [node name="Death" type="AudioStreamPlayer" parent="UI" unique_id=1159351505]
 stream = ExtResource("13_juymw")
 
-[connection signal="body_entered" from="UI/amongus-final/Area3D" to="UI" method="_on_area_3d_body_entered"]
+[node name="UI_amongus-final#Area3D" type="Area3D" parent="." unique_id=1236919473]
+transform = Transform3D(0.7436503, 0, 0, 0, 1, 0, 0, 0, 0.9501206, 0.12545204, -1.2172616, 2.949804)
+monitoring = false
+
+[node name="UI_amongus-final_Area3D#CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2031982619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26352692, 0.6363833, 0.92155457)
+shape = SubResource("BoxShape3D_iyw81")
+
+[node name="AmbientSoundManager" type="Node" parent="." unique_id=1203667569]
+script = ExtResource("9_tgtvd")
+ambient_sounds = Array[AudioStream]([ExtResource("14_vrnee"), ExtResource("15_l81oi"), ExtResource("16_02wln"), ExtResource("17_uogwn"), ExtResource("18_jgic8"), ExtResource("19_es685")])
+max_interval = 50.0
+play_chance = 0.95
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="AmbientSoundManager" unique_id=1297790141]
 
 [editable path="shi"]
 [editable path="shi/Sketchfab_Scene"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b581byce4vdfl"
+path="res://.godot/imported/stress metal.mp3-53f05dc817425bc536f030c5fe5c212a.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/random ass sounds/stress metal.mp3"
+dest_files=["res://.godot/imported/stress metal.mp3-53f05dc817425bc536f030c5fe5c212a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

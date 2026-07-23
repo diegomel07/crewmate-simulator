@@ -9,6 +9,7 @@ path="res://.godot/imported/amongus-final.obj-a3c4bd01b32f56c3c423fe07cc55755c.m
 [deps]
 
 files=["res://.godot/imported/amongus-final.obj-a3c4bd01b32f56c3c423fe07cc55755c.mesh"]
+
 source_file="res://assets/sound/amongus-final.obj"
 dest_files=["res://.godot/imported/amongus-final.obj-a3c4bd01b32f56c3c423fe07cc55755c.mesh", "res://.godot/imported/amongus-final.obj-a3c4bd01b32f56c3c423fe07cc55755c.mesh"]
 
