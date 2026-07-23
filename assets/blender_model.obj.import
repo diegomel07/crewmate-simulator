@@ -9,7 +9,6 @@ path="res://.godot/imported/blender_model.obj-64282bb241c345224d20886ad5419290.m
 [deps]
 
 files=["res://.godot/imported/blender_model.obj-64282bb241c345224d20886ad5419290.mesh"]
-
 source_file="res://assets/blender_model.obj"
 dest_files=["res://.godot/imported/blender_model.obj-64282bb241c345224d20886ad5419290.mesh", "res://.godot/imported/blender_model.obj-64282bb241c345224d20886ad5419290.mesh"]
 
